@@ -28,7 +28,7 @@ App.DisplayName=Chivalry: Medieval Warfare
 App.RootDir=./chivalrymw/
 App.BaseDirectory=./chivalrymw/220070/
 App.SteamWorkshopDownloadLocation=
-App.ExecutableWin=220070\Binaries\Win32\UDKGame.exe
+App.ExecutableWin=220070\Binaries\Win32\UDKLogging.exe
 App.WorkingDir=220070/Binaries/Win32
 App.WindowsCommandLineArgs=
 App.CommandLineArgs={{$PlatformArgs}} {{Map}}?steamsockets{{modname}}{{CustomOptions}} -Port={{$GamePort}} -AuthPort={{$AuthPort}} -QueryPort={{$QueryPort}} -MultiHome={{$ApplicationIPBinding}} -MaxPlayers={{$MaxUsers}} {{sdkfileid}} -ini:PCServer-UDKGame:Engine.AccessControl.GamePassword={{GamePassword}},Engine.AccessControl.AdminPassword={{AdminPassword}} -log=gameservers.log -seekfreeloadingserver
