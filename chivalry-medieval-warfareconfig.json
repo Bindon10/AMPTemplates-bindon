@@ -43,7 +43,7 @@
         "FieldName":"GamePassword",
         "InputType":"password",
         "ParamFieldName":"Engine.AccessControl.GamePassword",
-        "DefaultValue":"",
+        "DefaultValue":,
         "EnumValues":{}
     },
     {
@@ -54,7 +54,7 @@
         "FieldName":"AdminPassword",
         "InputType":"password",
         "ParamFieldName":"Engine.AccessControl.AdminPassword",
-        "DefaultValue":"{{newguid()}}",
+        "DefaultValue":{{newguid()}},
         "EnumValues":{}
     },
     {
