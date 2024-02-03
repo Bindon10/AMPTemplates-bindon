@@ -43,7 +43,7 @@
         "FieldName":"GamePassword",
         "InputType":"password",
         "ParamFieldName":"Engine.AccessControl.GamePassword",
-        "DefaultValue":,
+        "DefaultValue":"",
         "EnumValues":{}
     },
     {
