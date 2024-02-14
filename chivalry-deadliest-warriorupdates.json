@@ -1,0 +1,32 @@
+[
+    {
+        "UpdateStageName":"Config Directory Creation",
+        "UpdateSourcePlatform":"All",
+        "UpdateSource":"CreateDirectory",
+        "UpdateSourceArgs":"{{$FullBaseDir}}CDWGame/Config"
+    },
+    {
+        "UpdateStageName":"Config Template Download",
+        "UpdateSourcePlatform":"All",
+        "UpdateSource":"FetchURL",
+        "UpdateSourceData":"https://raw.githubusercontent.com/Bindon10/AMPTemplates/main/chivalry-deadliestwarriorcdwgame.ini",
+        "UpdateSourceTarget":"{{$FullBaseDir}}CDWGame/Config",
+        "UpdateSourceArgs":"PCServer-CDWGame.ini",
+        "OverwriteExistingFiles":false
+    },
+    {
+        "UpdateStageName":"SteamCMD Download",
+        "UpdateSourcePlatform":"All",
+        "UpdateSource":"SteamCMD",
+        "UpdateSourceData":"258680",
+        "UpdateSourceArgs":"241280",
+        "ForceDownloadPlatform":"Windows"
+    },
+    {
+        "UpdateStageName":"Initialise Wine",
+        "UpdateSourcePlatform":"Linux",
+        "UpdateSource":"Executable",
+        "UpdateSourceData":"/bin/bash",
+        "UpdateSourceArgs":"-c 'WINEPREFIX=\"{{$FullRootDir}}.wine\" WINEARCH=win64 /usr/bin/wineboot --init --update'"
+    }
+]
