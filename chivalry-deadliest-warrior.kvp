@@ -29,12 +29,12 @@ App.DisplayName=Chivalry: Deadliest Warrior
 App.RootDir=./chivalrydw/
 App.BaseDirectory=./chivalrydw/258680/
 App.SteamWorkshopDownloadLocation=
-App.ExecutableWin=258680\Binaries\Win64\CDWLogging.exe
+App.ExecutableWin=258680\Binaries\Win64\CDW.exe
 App.ExecutableLinux=/usr/bin/wine
 App.WorkingDir=258680/Binaries/Win64
-App.LinuxCommandLineArgs="./CDWLogging.exe"
+App.LinuxCommandLineArgs="./CDW.exe"
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} {{Map}}?steamsockets{{modname}}{{CustomOptions}} -Port={{$GamePort}} -AuthPort={{$AuthPort}} -QueryPort={{$QueryPort}} -MaxPlayers={{$MaxUsers}} {{sdkfileid}} -log=gameservers.log -seekfreeloadingserver
+App.CommandLineArgs={{$PlatformArgs}} {{Map}}?steamsockets{{modname}}{{CustomOptions}} -Port={{$GamePort}} -AuthPort={{$AuthPort}} -QueryPort={{$QueryPort}} -MaxPlayers={{$MaxUsers}} {{sdkfileid}} -dedicated=true -log=gameservers.log -seekfreeloadingserver
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"SteamAppId":"241280","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all"}
@@ -79,7 +79,7 @@ App.SteamUpdateAnonymousLogin=False
 App.SteamForceLoginPrompt=False
 App.RapidStartup=False
 App.DumpFullChildProcessTree=False
-App.MonitorChildProcessName=CDWLogging.exe
+App.MonitorChildProcessName=CDW.exe
 App.SupportsUniversalSleep=False
 App.WakeupMode=Any
 App.ApplicationReadyMode=Immediate
