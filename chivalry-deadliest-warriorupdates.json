@@ -9,7 +9,7 @@
         "UpdateStageName":"Config Template Download",
         "UpdateSourcePlatform":"All",
         "UpdateSource":"FetchURL",
-        "UpdateSourceData":"https://raw.githubusercontent.com/Bindon10/AMPTemplates/main/chivalry-deadliestwarriorcdwgame.ini",
+        "UpdateSourceData":"https://raw.githubusercontent.com/Bindon10/AMPTemplates/main/chivalry-deadliest-warriorcdwgame.ini",
         "UpdateSourceTarget":"{{$FullBaseDir}}CDWGame/Config",
         "UpdateSourceArgs":"PCServer-CDWGame.ini",
         "OverwriteExistingFiles":false
