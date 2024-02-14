@@ -291,17 +291,15 @@
         "EnumValues":{}
     },
     {
-        "DisplayName":"Server IP Binding",
-        "Category":"Chivalry Server Settings",
-        "Description":"",
-        "Keywords":"",
-        "FieldName":"$Multihome",
-        "InputType":"text",
-        "ParamFieldName":"Multihome",
-        "DefaultValue":"",
-        "EnumValues":{
-            "False":"",
-            "True":"{{$Multihome}}"
+        "DisplayName": "Server IP Binding",
+        "Category": "Chivalry Server Settings",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "$Multihome",
+        "InputType": "text",
+        "ParamFieldName": "$.IpAddress",
+        "EnumValues": {}
         }
     }
 ]
+
