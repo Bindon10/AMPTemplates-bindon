@@ -1,6 +1,6 @@
 [	
     {
-        "ConfigFile":"CDWGame/Config/PCServer-UDKGame.ini", 
+        "ConfigFile":"CDWGame/Config/PCServer-CDWGame.ini", 
         "AutoMap":true,
         "ConfigType":"ini"
     }
