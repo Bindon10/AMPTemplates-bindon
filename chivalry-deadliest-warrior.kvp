@@ -34,7 +34,7 @@ App.ExecutableLinux=/usr/bin/wine
 App.WorkingDir=258680/Binaries/Win64
 App.LinuxCommandLineArgs=./CDW.exe
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} {{Map}}?steamsockets{{modname}}{{CustomOptions}} -Port={{$GamePort}} -AuthPort={{$AuthPort}} -QueryPort={{$QueryPort}} -MaxPlayers={{$MaxUsers}} {{Customargs}} {{sdkfileid}} -dedicated=true -log=gameservers.log -seekfreeloadingserver
+App.CommandLineArgs={{$PlatformArgs}} {{Map}}?steamsockets{{modname}}{{CustomOptions}} -port={{$GamePort}} -authport={{$AuthPort}} -queryPort={{$QueryPort}} -MaxPlayers={{$MaxUsers}} {{Customargs}} {{sdkfileid}} -dedicated=true -log=gameservers.log -seekfreeloadingserver
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"SteamAppId":"241280","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all"}
