@@ -289,5 +289,19 @@
         "ParamFieldName":"CustomOptions",
         "DefaultValue":"",
         "EnumValues":{}
+    },
+    {
+        "DisplayName":"Server IP Binding",
+        "Category":"Chivalry Server Settings",
+        "Description":"",
+        "Keywords":"",
+        "FieldName":"$Multihome",
+        "InputType":"text",
+        "ParamFieldName":"Multihome",
+        "DefaultValue":"",
+        "EnumValues":{
+            "False":"",
+            "True":"{{$Multihome}}"
+        }
     }
 ]
