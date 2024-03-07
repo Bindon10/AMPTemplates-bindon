@@ -7,7 +7,7 @@
         "FieldName":"ServerName",
         "InputType":"text",
         "ParamFieldName":"Engine.GameReplicationInfo.ServerName",
-        "DefaultValue":"AMP Powered Chivalry: Medieval Warfare Server",
+        "DefaultValue":"AMP Powered Chivalry: Deadliest Warrior",
         "EnumValues":{}
     },
     {
