@@ -178,7 +178,7 @@
         "Keywords":"custom,maps,list,map,list,add,auto,bDontAddSdkMapsToList",
         "FieldName":"bDontAddSdkMapsToList",
         "InputType":"checkbox",
-        "ParamFieldName":"AOC.AOCGame.bDontAddSdkMapsToList",
+        "ParamFieldName":"CDW.AOCGame.bDontAddSdkMapsToList",
         "DefaultValue":"false",
         "EnumValues":{
             "False":"false",
