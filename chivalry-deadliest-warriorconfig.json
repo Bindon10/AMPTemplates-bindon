@@ -156,6 +156,16 @@
             "LTS-Valley_small":"LTS-Valley_small",
             "TD-Valley_small":"TD-Valley_small",
             "HTB-Valley_small":"HTB-Valley_small",
+			"LTS-Moor":"LTS-Moor",
+			"PTB-Moor":"PTB-Moor",
+			"HTB-Moor":"HTB-Moor",
+			"FFA-Moor":"FFA-Moor",
+			"TD-Moor":"TD-Moor",
+			"LTS-Frigid":"LTS-Frigid",
+			"PTB-Frigid":"PTB-Frigid",
+			"HTB-Frigid":"HTB-Frigid",
+			"FFA-Frigid":"FFA-Frigid",
+			"TD-Frigid":"TD-Frigid",
             "{{CustomMap}}":"--Custom--"
         }
     },
