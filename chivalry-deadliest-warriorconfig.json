@@ -7,7 +7,7 @@
         "FieldName":"ServerName",
         "InputType":"text",
         "ParamFieldName":"Engine.GameReplicationInfo.ServerName",
-        "DefaultValue":"AMP Powered Chivalry: Deadliest Warrior",
+        "DefaultValue":"AMP Powered Chivalry: Deadliest Warrior Server",
         "EnumValues":{}
     },
     {
@@ -79,7 +79,7 @@
         "FieldName":"Map",
         "InputType":"enum",
         "ParamFieldName":"Map",
-        "DefaultValue":"TD-Bamboo",
+        "DefaultValue":"LTS-Fortress",
         "EnumValues":{
             "TD-Bamboo":"TD-Bamboo",
             "PTB-Bamboo":"PTB-Bamboo",
@@ -168,13 +168,13 @@
         "InputType":"text",
         "ParamFieldName":"CustomMap",
         "DefaultValue":"",
-        "Placeholder":"AOCCTF-Empire_p",
+        "Placeholder":"LTS_Moor",
         "EnumValues":{}
     },
     {
         "DisplayName":"Disable Automatically Adding Custom Maps To List",
         "Category":"Chivalry Server Settings",
-        "Description":"If set, downloaded custom maps will not be added to the maplist, unless they are specifically listed in 'PCServer-UDKGame.ini'",
+        "Description":"If set, downloaded custom maps will not be added to the maplist, unless they are specifically listed in 'PCServer-CDWGame.ini'",
         "Keywords":"custom,maps,list,map,list,add,auto,bDontAddSdkMapsToList",
         "FieldName":"bDontAddSdkMapsToList",
         "InputType":"checkbox",
@@ -293,7 +293,7 @@
     {
         "DisplayName":"Custom Startup Args",
         "Category":"Chivalry Server Settings",
-        "Description":"Sets custom startup args for the server. Don't use options already in AMP's settings! this is also where you would put your -multihome= startup argument which is required on windows instances",
+        "Description":"Sets custom startup options for the server. Don't use options already in AMP's settings! On Windows this is where you would put the -multihome= parameter",
         "Keywords":"custom,command,line,options",
         "FieldName":"Customargs",
         "InputType":"text",
