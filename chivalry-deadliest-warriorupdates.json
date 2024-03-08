@@ -22,6 +22,16 @@
         "UpdateSourceArgs":"241280",
         "ForceDownloadPlatform":"Windows"
     },
+	{
+        "UpdateStageName":"Steam API Fix",
+        "UpdateSourcePlatform":"All",
+        "UpdateSource":"FetchURL",
+        "UpdateSourceData":"https://raw.githubusercontent.com/Bindon10/AMPTemplates/main/steam.zip",
+        "UpdateSourceTarget":"{{$FullBaseDir}}chivalrydw/258680/Binaries/Win64",
+        "UnzipUpdateSource":true,
+        "OverwriteExistingFiles":true,
+        "DeleteAfterExtract":true
+    },
     {
         "UpdateStageName":"Initialise Wine",
         "UpdateSourcePlatform":"Linux",
