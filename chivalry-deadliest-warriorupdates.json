@@ -27,17 +27,17 @@
         "UpdateSourcePlatform":"Windows",
         "UpdateSource":"FetchURL",
         "UpdateSourceData":"https://raw.githubusercontent.com/Bindon10/AMPTemplates/main/steam.zip",
-        "UpdateSourceTarget":"{{$FullBaseDir}}chivalrydw/258680/Binaries/Win64",
+        "UpdateSourceTarget":"{{$FullBaseDir}}/Binaries/Win64",
         "UnzipUpdateSource":true,
         "OverwriteExistingFiles":true,
         "DeleteAfterExtract":true
     },
 	{
-        "UpdateStageName":"Steam API Fix (Linux)",
+        "UpdateStageName":"Steam API Fix",
         "UpdateSourcePlatform":"Linux",
         "UpdateSource":"FetchURL",
         "UpdateSourceData":"https://raw.githubusercontent.com/Bindon10/AMPTemplates/main/steam.tar.gz",
-        "UpdateSourceTarget":"{{$FullBaseDir}}chivalrydw/258680/Binaries/Win64",
+        "UpdateSourceTarget":"{{$FullBaseDir}}/Binaries/Win64",
         "UnzipUpdateSource":true,
         "OverwriteExistingFiles":true,
         "DeleteAfterExtract":true
