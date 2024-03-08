@@ -293,7 +293,7 @@
     {
         "DisplayName":"Custom Startup Args",
         "Category":"Chivalry Server Settings",
-        "Description":"Sets custom startup args for the server. Don't use options already in AMP's settings! this is also where you would put your -multihome= startup argument",
+        "Description":"Sets custom startup args for the server. Don't use options already in AMP's settings! this is also where you would put your -multihome= startup argument which is required on windows instances",
         "Keywords":"custom,command,line,options",
         "FieldName":"Customargs",
         "InputType":"text",
