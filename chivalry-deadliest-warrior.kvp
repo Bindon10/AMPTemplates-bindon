@@ -37,7 +37,7 @@ App.WindowsCommandLineArgs=
 App.CommandLineArgs={{$PlatformArgs}} {{Map}}?steamsockets{{modname}}{{CustomOptions}} -Port={{$GamePort}} -QueryPort={{$QueryPort}} {{Customargs}} {{sdkfileid}} -log=gameservers.log -MaxPlayers={{$MaxUsers}} -seekfreeloadingserver
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
-App.EnvironmentVariables={"SteamAppId":"241280","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all"}
+App.EnvironmentVariables={"SteamAppId":"219640","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all"}
 App.CommandLineParameterFormat=-{0}={1}
 App.CommandLineParameterDelimiter= 
 App.ExitMethod=OS_CLOSE
