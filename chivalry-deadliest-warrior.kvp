@@ -11,6 +11,7 @@ Meta.ConfigManifest=chivalry-deadliest-warriorconfig.json
 Meta.MetaConfigManifest=chivalry-deadliest-warriormetaconfig.json
 Meta.ConfigRoot=chivalry-deadliest-warrior.kvp
 Meta.MinAMPVersion=2.4.7
+Meta.AppConfigId=22f6f6c7-57c1-41aa-82c1-30875df9ff10
 Meta.SpecificDockerImage=cubecoders/ampbase:wine8
 Meta.DockerRequired=False
 Meta.DockerBaseReadOnly=False
