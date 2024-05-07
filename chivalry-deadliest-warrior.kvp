@@ -26,7 +26,6 @@ Meta.ReleaseNotes=
 Meta.BreakingReleaseNotes=
 Meta.ImportableExtensions=[]
 Meta.AppConfigId=32ddc446-605f-44f1-9a9c-e946ff4d2fa8
-GenericModule.Meta.AppConfigID=32ddc446-605f-44f1-9a9c-e946ff4d2fa8
 App.DisplayName=Chivalry: Deadliest Warrior
 App.RootDir=./chivalrydw/
 App.BaseDirectory=./chivalrydw/258680/
