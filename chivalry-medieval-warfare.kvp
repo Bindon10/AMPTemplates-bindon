@@ -30,10 +30,10 @@ App.DisplayName=Chivalry: Medieval Warfare
 App.RootDir=./chivalrymw/
 App.BaseDirectory=./chivalrymw/220070/
 App.SteamWorkshopDownloadLocation=
-App.ExecutableWin=220070\Binaries\Win64\UDK.exe
+App.ExecutableWin=220070\Binaries\Win64\UDKLogging.exe
 App.ExecutableLinux=/usr/bin/wine
 App.WorkingDir=220070/Binaries/Win64
-App.LinuxCommandLineArgs="./UDK.exe"
+App.LinuxCommandLineArgs="./UDKLogging.exe"
 App.WindowsCommandLineArgs=
 App.CommandLineArgs={{$PlatformArgs}} {{Map}}?steamsockets{{modname}}{{CustomOptions}} -Port={{$GamePort}} -AuthPort={{$AuthPort}} -QueryPort={{$QueryPort}} -MultiHome={{$ApplicationIPBinding}} -MaxPlayers={{$MaxUsers}} {{sdkfileid}} -log=gameservers.log -seekfreeloadingserver
 App.UseLinuxIOREDIR=False
@@ -80,7 +80,7 @@ App.SteamUpdateAnonymousLogin=True
 App.SteamForceLoginPrompt=False
 App.RapidStartup=False
 App.DumpFullChildProcessTree=False
-App.MonitorChildProcessName=^.*UDK\.exe.*-Port={{$GamePort}}.*$
+App.MonitorChildProcessName=^.*UDKLogging\.exe.*-Port={{$GamePort}}.*$
 App.SupportsUniversalSleep=False
 App.WakeupMode=Any
 App.ApplicationReadyMode=Immediate
