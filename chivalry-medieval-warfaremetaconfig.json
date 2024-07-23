@@ -1,6 +1,6 @@
 [
   {
-    "ConfigFile": "./KFGame/Config/PCServer-UDKGame.ini",
+    "ConfigFile": "./UDKGame/Config/PCServer-UDKGame.ini",
     "AutoMap": true,
     "ConfigType": "ini"
   },
