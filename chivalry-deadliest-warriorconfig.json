@@ -299,16 +299,5 @@
         "ParamFieldName":"CustomOptions",
         "DefaultValue":"",
         "EnumValues":{}
-    },
-    {
-        "DisplayName":"Custom Startup Args",
-        "Category":"Chivalry Server Settings",
-        "Description":"Sets custom startup options for the server. Don't use options already in AMP's settings! On Windows this is where you would put the -multihome= parameter",
-        "Keywords":"custom,command,line,options",
-        "FieldName":"Customargs",
-        "InputType":"text",
-        "ParamFieldName":"Customargs",
-        "DefaultValue":"",
-        "EnumValues":{}
     }
 ]
