@@ -17,7 +17,7 @@ If you believe that this template needs either updating or changes made, please 
 
 Once you've submitted a pull request, it will be reviewed and tested when I can get around to it.
 
-    This Template works as of March 8th 2024 (Pre official servers shutdown)
+    This Template works as of September 15th 2024 (Post official servers shutdown) *This Template is very buggy on account of the server software being awful*
 
 If you found this template in an attempt to get the "Chivalry: Deadliest Warrior Dedicated Server" working, you can either download the zip/tar.gz provided or download the "Chivalry: Medieval Warfare Dedicated Server" through Steam/SteamCMD and move
 the "steam_api64.dll, steamclient64.dll and tier0_s64.dll" files from the MW Server into your Binaries/Win64 folder for DW (replacing the existing ones)
