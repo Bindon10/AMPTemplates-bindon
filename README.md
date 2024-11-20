@@ -11,8 +11,6 @@ This Template is not maintained whatsoever, modifications will be done as needed
     This template will run and appear on the server list, the reason for the steamfix portion of the update process (through the provided Steam.zip/Steam.tar.gz) is that Torn Banner has not updated
     the DLLs for the Steam API, as such it fails to connect; the files included in the Zip/Tar.gz have been pulled from the Chivalry: Medieval Warfare Dedicated Server software.
 
-This Version of the template (which is considered to be the last major version) uses the CDWLogging Executable rather than the base CDW.exe
-
 If you believe that this template needs either updating or changes made, please submit a pull request for that template with a justification for why that change is needed.
 
 Once you've submitted a pull request, it will be reviewed and tested when I can get around to it.
