@@ -1,7 +1,7 @@
-Chivalry Deadliest Warrior Template for Cubecoders AMP
+This repo was originally for my Chivalry Deadliest Warrior Template for Cubecoders AMP, but now serves as a home for my random inspirations.
 
-This is a modified Template based off the wonderful work that Greelan did for the Chivalry: Medieval Warfare Template.
 
+Deadliest Warrior Stuff:
 This Template is not maintained whatsoever, modifications will be done as needed.
 
     Chivalry: Deadliest Warrior requires you to login to an account that owns it in order to download through SteamCMD, anonymous login is not possible.
