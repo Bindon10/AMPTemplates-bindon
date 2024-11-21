@@ -78,7 +78,7 @@ App.SteamUpdateAnonymousLogin=False
 App.SteamForceLoginPrompt=True
 App.RapidStartup=False
 App.DumpFullChildProcessTree=False
-App.MonitorChildProcessName=^.*srcds\.exe.*-Port={{$GamePort}}.*$
+App.MonitorChildProcessName=
 App.SupportsUniversalSleep=False
 App.WakeupMode=Any
 App.ApplicationReadyMode=RCONConnected
