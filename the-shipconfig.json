@@ -393,7 +393,7 @@
     {
         "DisplayName":"Innocent kills before being warned",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Server Settings:bans:2",
+        "Subcategory":"Server Settings:settings:1",
         "Description":"Number of innocent kills before a player is warned",
         "Keywords":"bans,warn,warning,innocent,kills,kill",
         "FieldName":"ship_innocent_kills_warning",
@@ -409,7 +409,7 @@
     {
         "DisplayName":"Innocent kills before being kicked and banned",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Server Settings:bans:2",
+        "Subcategory":"Server Settings:settings:1",
         "Description":"Number of innocent kills before a player is kicked and banned",
         "Keywords":"bans,warn,warning,innocent,kills,kill",
         "FieldName":"ship_kick_innocent_kills",
@@ -425,7 +425,7 @@
     {
         "DisplayName":"Bank Balance before warning",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Server Settings:bans:2",
+        "Subcategory":"Server Settings:settings:1",
         "Description":"Bank balance required before a player is warned",
         "Keywords":"bans,warn,warning,bank,balance,money",
         "FieldName":"ship_kick_cash_warning",
@@ -441,7 +441,7 @@
     {
         "DisplayName":"Bank Balance before kick and ban",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Server Settings:bans:2",
+        "Subcategory":"Server Settings:settings:1",
         "Description":"Bank balance required before a player is kicked and banned",
         "Keywords":"bans,warn,warning,bank,balance,money",
         "FieldName":"ship_kick_cash",
@@ -457,7 +457,7 @@
     {
         "DisplayName":"Kick/Ban Duration",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Server Settings:bans:2",
+        "Subcategory":"Server Settings:settings:1",
         "Description":"Duration in minutes for which players are kicked/banned",
         "Keywords":"bans,warn,warning,kick",
         "FieldName":"ship_kick_ban_minutes",
@@ -473,7 +473,7 @@
     {
         "DisplayName":"Kick/Ban Duration after vote",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Server Settings:bans:2",
+        "Subcategory":"Server Settings:settings:1",
         "Description":"Duration in minutes for which players are kicked/banned after a vote",
         "Keywords":"bans,warn,warning,kick",
         "FieldName":"ship_kick_vote_ban_minutes",
@@ -487,10 +487,10 @@
         
     },
     {
-        "DisplayName":"Enable Votekick",
+        "DisplayName":"Disable Votekick",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Server Settings:voting:3",
-        "Description":"Sets whether the Votekick system is enabled",
+        "Subcategory":"Server Settings:settings:1",
+        "Description":"Sets whether the Votekick system is disabled",
         "Keywords":"kick,votekick,bans,ban,vote,votes",
         "FieldName":"votekick_disable",
         "InputType":"enum",
@@ -503,10 +503,10 @@
         }
     },
     {
-        "DisplayName":"Enable Map Voting",
+        "DisplayName":"Disable Map Voting",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Server Settings:voting:3",
-        "Description":"Sets whether the Map Vote system is enabled",
+        "Subcategory":"Server Settings:settings:1",
+        "Description":"Sets whether the Map Vote system is disabled",
         "Keywords":"votemap,map,maps,vote,votes",
         "FieldName":"votemap_disable",
         "InputType":"enum",
@@ -519,9 +519,9 @@
         }
     },
     {
-        "DisplayName":"Enable Mode Voting",
+        "DisplayName":"Disable Mode Voting",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Server Settings:voting:3",
+        "Subcategory":"Server Settings:settings:1",
         "Description":"Sets whether the gamemode voting system is enabled",
         "Keywords":"votemode,mode,modes,voting,vote",
         "FieldName":"votemode_disable",
