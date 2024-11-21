@@ -585,7 +585,7 @@
     {
         "DisplayName":"Enable Automatic Team Balancing",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Gameplay Settings:settings:1",
+        "Subcategory":"Server Settings:settings:1",
         "Description":"If set, the automatic team balancing feature will be disabled",
         "Keywords":"team,automatic,balance,balancing,mp_autoteambalance",
         "FieldName":"ship_autobalance_teams",
