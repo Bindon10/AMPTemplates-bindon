@@ -171,7 +171,7 @@
         "FieldName":"ship_compass_quarry",
         "InputType":"enum",
         "ParamFieldName":"ship_compass_quarry",
-        "IncludeInCommandLine":true,
+        "IncludeInCommandLine":false,
         "DefaultValue":"0",
         "EnumValues":{
             "0":"Off",
@@ -187,7 +187,7 @@
         "FieldName":"ship_wl_compass_quarry",
         "InputType":"enum",
         "ParamFieldName":"ship_wl_compass_quarry",
-        "IncludeInCommandLine":true,
+        "IncludeInCommandLine":false,
         "DefaultValue":"0",
         "EnumValues":{
             "0":"Off",
@@ -495,7 +495,7 @@
         "FieldName":"votekick_disable",
         "InputType":"enum",
         "ParamFieldName":"votekick_disable",
-        "IncludeInCommandLine":true,
+        "IncludeInCommandLine":false,
         "DefaultValue":"0",
         "EnumValues":{
             "0":"False",
@@ -511,7 +511,7 @@
         "FieldName":"votemap_disable",
         "InputType":"enum",
         "ParamFieldName":"votemap_disable",
-        "IncludeInCommandLine":true,
+        "IncludeInCommandLine":false,
         "DefaultValue":"0",
         "EnumValues":{
             "0":"False",
@@ -527,7 +527,7 @@
         "FieldName":"votemode_disable",
         "InputType":"enum",
         "ParamFieldName":"votemode_disable",
-        "IncludeInCommandLine":true,
+        "IncludeInCommandLine":false,
         "DefaultValue":"0",
         "EnumValues":{
             "0":"False",
@@ -559,7 +559,7 @@
         "FieldName":"ship_game_mode_random",
         "InputType":"enum",
         "ParamFieldName":"ship_game_mode_random",
-        "IncludeInCommandLine":true,
+        "IncludeInCommandLine":false,
         "DefaultValue":"0",
         "EnumValues":{
             "0":"False",
@@ -575,7 +575,7 @@
         "FieldName":"ship_game_mode_reset_after_vote",
         "InputType":"enum",
         "ParamFieldName":"ship_game_mode_reset_after_vote",
-        "IncludeInCommandLine":true,
+        "IncludeInCommandLine":false,
         "DefaultValue":"0",
         "EnumValues":{
             "0":"False",
