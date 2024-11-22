@@ -199,7 +199,7 @@
     {
         "DisplayName":"Allow Spectators",
         "Category":"Half Life 2 Deathmatch:stadia_controller",
-        "Subcategory":"Server:dns:1",
+        "Subcategory":"Gameplay:joystick:2",
         "Description":"If set, players will be allowed to join the server as spectators",
         "Keywords":"allow,spectators,allow_spectators",
         "FieldName":"mp_allowspectators",
@@ -214,7 +214,7 @@
     {
         "DisplayName":"Weapons Stay",
         "Category":"Half Life 2 Deathmatch:stadia_controller",
-        "Subcategory":"Server:dns:1",
+        "Subcategory":"Gameplay:Joystick:2",
         "Description":"set to 1 if weapons stay (immediate pickup by players without weapons), Requires that there be additional ammo (can't pick up a weapon to get more ammo)",
         "Keywords":"stay,weapon,weaponstay",
         "FieldName":"mp_weaponstay",
@@ -229,7 +229,7 @@
     {
         "DisplayName":"Force Respawn",
         "Category":"Half Life 2 Deathmatch:stadia_controller",
-        "Subcategory":"Server:dns:1",
+        "Subcategory":"Gameplay:joystick:2",
         "Description":"if enabled, Forces players to respawn after death",
         "Keywords":"Force,respawn,spawn",
         "FieldName":"mp_forcerespawn",
@@ -289,7 +289,7 @@
     {
         "DisplayName":"Weapon Respawn Time",
         "Category":"Half Life 2 Deathmatch:stadia_controller",
-        "Subcategory":"Server:dns:1",
+        "Subcategory":"Gameplay:joystick:2",
         "Description":"Sets the in seconds before weapons Respawn (default is 20)",
         "Keywords":"weapon,Respawn,sv_hl2mp_weapon_respawn_time,weaponrespawn",
         "FieldName":"sv_hlp2mp_weapon_respawn_time",
@@ -304,7 +304,7 @@
     {
         "DisplayName":"Item Respawn Time",
         "Category":"Half Life 2 Deathmatch:stadia_controller",
-        "Subcategory":"Server:dns:1",
+        "Subcategory":"Gameplay:joystick:2",
         "Description":"Sets the in seconds before items Respawn (default is 30)",
         "Keywords":"item,Respawn,sv_hl2mp_item_respawn_time,itemrespawn",
         "FieldName":"sv_hlp2mp_item_respawn_time",
