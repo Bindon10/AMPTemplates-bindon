@@ -214,7 +214,7 @@
     {
         "DisplayName":"Weapons Stay",
         "Category":"Half Life 2 Deathmatch:stadia_controller",
-        "Subcategory":"Gameplay:Joystick:2",
+        "Subcategory":"Gameplay:joystick:2",
         "Description":"set to 1 if weapons stay (immediate pickup by players without weapons), Requires that there be additional ammo (can't pick up a weapon to get more ammo)",
         "Keywords":"stay,weapon,weaponstay",
         "FieldName":"mp_weaponstay",
