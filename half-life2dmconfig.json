@@ -1063,20 +1063,6 @@
         "EnumValues":{}
     },
     {
-        "DisplayName":"SourceTV Snapshot Rate",
-        "Category":"Half Life 2 Deathmatch:stadia_controller",
-        "Subcategory":"SourceTV:tv:4",
-        "Description":"Sets world snapshots broadcasted per second by SourceTV (Tickrate)",
-        "Keywords":"rate,broadcast,sourcetv,tv,snapshot,tv_snapshotrate",
-        "FieldName":"tv_snapshotrate",
-        "InputType":"number",
-        "MinValue":"1",
-        "ParamFieldName":"tv_snapshotrate",
-        "DefaultValue":"64",
-        "Placeholder":"64",
-        "EnumValues":{}
-    },
-    {
         "DisplayName":"SourceTV Password",
         "Category":"Half Life 2 Deathmatch:stadia_controller",
         "Subcategory":"SourceTV:tv:4",
