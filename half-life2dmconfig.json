@@ -1094,9 +1094,9 @@
         "Subcategory":"SourceTV:tv:4",
         "Description":"If enabled, allow player voice chat if broadcasted",
         "Keywords":"sourcetv,tv,tv_delaymapchange",
-        "FieldName":"tv_delaymapchange",
+        "FieldName":"tv_relayvoice",
         "InputType":"checkbox",
-        "ParamFieldName":"tv_delaymapchange",
+        "ParamFieldName":"tv_relayvoice",
         "DefaultValue":"0",
         "EnumValues":{
             "False":"0",
