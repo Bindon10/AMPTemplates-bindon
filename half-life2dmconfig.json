@@ -297,6 +297,7 @@
         "ParamFieldName":"decalfrequency",
         "DefaultValue":"20",
         "Placeholder":"20",
+        "Suffix":"Seconds",
         "EnumValues":{}
     },
     {
@@ -385,47 +386,6 @@
             "False":"",
             "True":"-insecure "
         }
-    },
-    {
-        "DisplayName":"Additional Command Line Parameters",
-        "Category":"Half Life 2 Deathmatch:stadia_controller",
-        "Subcategory":"Server Settings:dns:1",
-        "Description":"Specifies additional command line parameters (anything that begins with a -) that are not otherwise set by AMP. Use with care",
-        "Keywords":"custom,server,arguments,variables,cvars,convars,parameters",
-        "FieldName":"CustomParameters",
-        "InputType":"text",
-        "IsFlagArgument":false,
-        "ParamFieldName":"CustomParameters",
-        "DefaultValue":"",
-        "Placeholder":"",
-        "EnumValues":{}
-    },
-    {
-        "DisplayName":"Additional Console Variables",
-        "Category":"Half Life 2 Deathmatch:stadia_controller",
-        "Subcategory":"Server Settings:dns:1",
-        "Description":"Specifies additional console variables (anything that begins with a +) that are not otherwise set by AMP. Use with care. Preferably, specify the equivalent under \"Additional Server Settings\"",
-        "Keywords":"custom,server,arguments,variables,cvars,convars,parameters",
-        "FieldName":"CustomConVars",
-        "InputType":"text",
-        "IsFlagArgument":false,
-        "ParamFieldName":"CustomConVars",
-        "DefaultValue":"",
-        "Placeholder":"",
-        "EnumValues":{}
-    },
-    {
-        "DisplayName":"Additional Server Settings",
-        "Category":"Half Life 2 Deathmatch:stadia_controller",
-        "Subcategory":"Server Settings:dns:1",
-        "Description":"Specifies additional settings to include in \"server.cfg\" that are not otherwise set by AMP. One setting per line",
-        "Keywords":"additional,settings,custom",
-        "FieldName":"UserSettings",
-        "InputType":"Textarea",
-        "IsFlagArgument":false,
-        "ParamFieldName":"UserSettings",
-        "DefaultValue":"",
-        "EnumValues":{}
     },
     {
         "DisplayName":"Player Gravity",
@@ -555,6 +515,53 @@
         }
     },
     {
+        "DisplayName":"Enable Voice",
+        "Category":"Half Life 2 Deathmatch:stadia_controller",
+        "Subcategory":"Server Settings:dns:1",
+        "Description":"If enabled, voice communication for the server will be allowed",
+        "Keywords":"enable,voice,sv_voiceenable",
+        "FieldName":"sv_voiceenable",
+        "InputType":"checkbox",
+        "ParamFieldName":"sv_voiceenable",
+        "DefaultValue":"1",
+        "EnumValues":{
+            "False":"0",
+            "True":"1"
+        }
+    },
+    {
+        "DisplayName":"Allow All Talk",
+        "Category":"Half Life 2 Deathmatch:stadia_controller",
+        "Subcategory":"Server Settings:dns:1",
+        "Description":"If enabled, players can communicate with all other players, with no team restrictions",
+        "Keywords":"all,talk,sv_alltalk",
+        "FieldName":"sv_alltalk",
+        "InputType":"checkbox",
+        "ParamFieldName":"sv_alltalk",
+        "DefaultValue":"0",
+        "EnumValues":{
+            "False":"0",
+            "True":"1"
+        }
+    },
+    {
+        "DisplayName":"Voice Codec",
+        "Category":"Half Life 2 Deathmatch:stadia_controller",
+        "Subcategory":"Server Settings:dns:1",
+        "Description":"Sets the voice codec used for in game voice communication",
+        "Keywords":"voice,codec,sv_voicecodec",
+        "FieldName":"sv_voicecodec",
+        "InputType":"checkbox",
+        "ParamFieldName":"sv_voicecodec",
+        "DefaultValue":"vaudio_miles",
+        "EnumValues":{
+			"Celt":"vaudio_celt",
+            "Miles":"vaudio_miles",
+            "Minimp3":"vaudio_minimp3",
+			"Speex":"vaudio_speex"
+        }
+    },
+    {
         "DisplayName":"Enable sv_pure",
         "Category":"Half Life 2 Deathmatch:stadia_controller",
         "Subcategory":"Server Settings:dns:1",
@@ -615,6 +622,21 @@
         }
     },
     {
+        "DisplayName":"Enable Log",
+        "Category":"Half Life 2 Deathmatch:stadia_controller",
+        "Subcategory":"Server Settings:dns:1",
+        "Description":"If enabled, the server will log information (Default is 1)",
+        "Keywords":"Server,log,sv_logfile",
+        "FieldName":"sv_logfile",
+        "InputType":"checkbox",
+        "ParamFieldName":"sv_logfile",
+        "DefaultValue":"1",
+        "EnumValues":{
+            "False":"0",
+            "True":"1"
+        }
+    },
+    {
         "DisplayName":"Visible Player Limit",
         "Category":"Half Life 2 Deathmatch:stadia_controller",
         "Subcategory":"Server Settings:dns:1",
@@ -628,6 +650,47 @@
         "DefaultValue":"-1",
         "Placeholder":"-1",
         "Suffix":"players",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Additional Command Line Parameters",
+        "Category":"Half Life 2 Deathmatch:stadia_controller",
+        "Subcategory":"Server Settings:dns:1",
+        "Description":"Specifies additional command line parameters (anything that begins with a -) that are not otherwise set by AMP. Use with care",
+        "Keywords":"custom,server,arguments,variables,cvars,convars,parameters",
+        "FieldName":"CustomParameters",
+        "InputType":"text",
+        "IsFlagArgument":false,
+        "ParamFieldName":"CustomParameters",
+        "DefaultValue":"",
+        "Placeholder":"",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Additional Console Variables",
+        "Category":"Half Life 2 Deathmatch:stadia_controller",
+        "Subcategory":"Server Settings:dns:1",
+        "Description":"Specifies additional console variables (anything that begins with a +) that are not otherwise set by AMP. Use with care. Preferably, specify the equivalent under \"Additional Server Settings\"",
+        "Keywords":"custom,server,arguments,variables,cvars,convars,parameters",
+        "FieldName":"CustomConVars",
+        "InputType":"text",
+        "IsFlagArgument":false,
+        "ParamFieldName":"CustomConVars",
+        "DefaultValue":"",
+        "Placeholder":"",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Additional Server Settings",
+        "Category":"Half Life 2 Deathmatch:stadia_controller",
+        "Subcategory":"Server Settings:dns:1",
+        "Description":"Specifies additional settings to include in \"server.cfg\" that are not otherwise set by AMP. One setting per line",
+        "Keywords":"additional,settings,custom",
+        "FieldName":"UserSettings",
+        "InputType":"Textarea",
+        "IsFlagArgument":false,
+        "ParamFieldName":"UserSettings",
+        "DefaultValue":"",
         "EnumValues":{}
     },
     {
@@ -809,36 +872,6 @@
         }
     },
     {
-        "DisplayName":"Enable Voice",
-        "Category":"Half Life 2 Deathmatch:stadia_controller",
-        "Subcategory":"Gameplay Settings:joystick:2",
-        "Description":"If enabled, voice communication for the server will be allowed",
-        "Keywords":"enable,voice,sv_voiceenable",
-        "FieldName":"sv_voiceenable",
-        "InputType":"checkbox",
-        "ParamFieldName":"sv_voiceenable",
-        "DefaultValue":"1",
-        "EnumValues":{
-            "False":"0",
-            "True":"1"
-        }
-    },
-    {
-        "DisplayName":"Allow All Talk",
-        "Category":"Half Life 2 Deathmatch:stadia_controller",
-        "Subcategory":"Gameplay Settings:joystick:2",
-        "Description":"If enabled, players can communicate with all other players, with no team restrictions",
-        "Keywords":"all,talk,sv_alltalk",
-        "FieldName":"sv_alltalk",
-        "InputType":"checkbox",
-        "ParamFieldName":"sv_alltalk",
-        "DefaultValue":"0",
-        "EnumValues":{
-            "False":"0",
-            "True":"1"
-        }
-    },
-    {
         "DisplayName":"Allow Spectators",
         "Category":"Half Life 2 Deathmatch:stadia_controller",
         "Subcategory":"Spectator Settings:joystick:3",
@@ -912,6 +945,209 @@
         "DefaultValue":"4",
         "Placeholder":"4",
         "EnumValues":{}
+    },
+    {
+        "DisplayName":"Enable SourceTV",
+        "Category":"Half Life 2 Deathmatch:stadia_controller",
+        "Subcategory":"SourceTV:tv:4",
+        "Description":"Activates SourceTV on the game server",
+        "Keywords":"sourcetv,tv,tv_enable",
+        "FieldName":"tv_enable",
+        "InputType":"checkbox",
+        "ParamFieldName":"tv_enable",
+        "DefaultValue":"0",
+        "EnumValues":{
+            "False":"0",
+            "True":"1"
+        }
+    },
+    {
+        "DisplayName":"SourceTV Name",
+        "Category":"Half Life 2 Deathmatch:stadia_controller",
+        "Subcategory":"SourceTV:tv:4",
+        "Description":"Sets SourceTV name as it appears in server browser and scoreboard",
+        "Keywords":"tv,name,tv_name",
+        "FieldName":"tv_name",
+        "InputType":"text",
+        "ParamFieldName":"tv_name",
+        "DefaultValue":"Half-Life 2 Deathmatch SourceTV",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"SourceTV Title",
+        "Category":"Half Life 2 Deathmatch:stadia_controller",
+        "Subcategory":"SourceTV:tv:4",
+        "Description":"Sets a SourceTV broadcast title shown in the spectator GUI",
+        "Keywords":"tv,title,tv_title",
+        "FieldName":"tv_title",
+        "InputType":"text",
+        "ParamFieldName":"tv_title",
+        "DefaultValue":"Half-Life 2 Deathmatch SourceTV",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Enable Automatic Demo Recording",
+        "Category":"Half Life 2 Deathmatch:stadia_controller",
+        "Subcategory":"SourceTV:tv:4",
+        "Description":"If set, all games will be recorded as SourceTV demos",
+        "Keywords":"sourcetv,tv,tv_autorecord",
+        "FieldName":"tv_autorecord",
+        "InputType":"checkbox",
+        "ParamFieldName":"tv_autorecord",
+        "DefaultValue":"0",
+        "EnumValues":{
+            "False":"0",
+            "True":"1"
+        }
+    },
+    {
+        "DisplayName":"SourceTV Viewer Limit",
+        "Category":"Half Life 2 Deathmatch:stadia_controller",
+        "Subcategory":"SourceTV:tv:4",
+        "Description":"Sets the maximum number of clients allowed to connect to the server's SourceTV. 0 = no SourceTV viewers are allowed, the game will only be recorded locally",
+        "Keywords":"max,spectators,clients,viewers,sourcetv,tv,tv_maxclients",
+        "FieldName":"tv_maxclients",
+        "InputType":"number",
+        "MinValue":"0",
+        "MaxValue":"255",
+        "ParamFieldName":"tv_maxclients",
+        "DefaultValue":"64",
+        "Placeholder":"64",
+        "Suffix":"viewers",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"SourceTV Delay",
+        "Category":"Half Life 2 Deathmatch:stadia_controller",
+        "Subcategory":"SourceTV:tv:4",
+        "Description":"Sets the time the SourceTV stream will be delayed (in seconds)",
+        "Keywords":"spectators,sourcetv,tv,tv_delay",
+        "FieldName":"tv_delay",
+        "InputType":"number",
+        "MinValue":"0",
+        "MaxValue":"255",
+        "ParamFieldName":"tv_delay",
+        "DefaultValue":"15",
+        "Placeholder":"15",
+        "Suffix":"seconds",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Delay Map Change",
+        "Category":"Half Life 2 Deathmatch:stadia_controller",
+        "Subcategory":"SourceTV:tv:4",
+        "Description":"If set, delays the server from changing maps until the broadcast is complete.",
+        "Keywords":"sourcetv,tv,tv_delaymapchange",
+        "FieldName":"tv_delaymapchange",
+        "InputType":"checkbox",
+        "ParamFieldName":"tv_delaymapchange",
+        "DefaultValue":"0",
+        "EnumValues":{
+            "False":"0",
+            "True":"1"
+        }
+    },
+    {
+        "DisplayName":"Maximum SourceTV Bandwidth",
+        "Category":"Half Life 2 Deathmatch:stadia_controller",
+        "Subcategory":"SourceTV:tv:4",
+        "Description":"Sets the maximum SourceTV spectator bandwidth rate allowed. 0 = unlimited",
+        "Keywords":"maximum,bandwidth,rate,sourcetv,tv,tv_maxrate",
+        "FieldName":"tv_maxrate",
+        "InputType":"number",
+        "MinValue":"0",
+        "ParamFieldName":"tv_maxrate",
+        "DefaultValue":"8000",
+        "Placeholder":"8000",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"SourceTV Snapshot Rate",
+        "Category":"Half Life 2 Deathmatch:stadia_controller",
+        "Subcategory":"SourceTV:tv:4",
+        "Description":"Sets world snapshots broadcasted per second by SourceTV",
+        "Keywords":"rate,broadcast,sourcetv,tv,snapshot,tv_snapshotrate",
+        "FieldName":"tv_snapshotrate",
+        "InputType":"number",
+        "MinValue":"1",
+        "ParamFieldName":"tv_snapshotrate",
+        "DefaultValue":"64",
+        "Placeholder":"64",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Server Password",
+        "Category":"Half Life 2 Deathmatch:stadia_controller",
+        "Subcategory":"SourceTV:tv:4",
+        "Description":"Sets required password for connecting spectators. Default is no password",
+        "Keywords":"sourcetv,password,tv_password",
+        "FieldName":"tv_password",
+        "InputType":"password",
+        "ParamFieldName":"tv_password",
+        "DefaultValue":"",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Relay Voice",
+        "Category":"Half Life 2 Deathmatch:stadia_controller",
+        "Subcategory":"SourceTV:tv:4",
+        "Description":"If enabled, allow player voice chat if broadcasted",
+        "Keywords":"sourcetv,tv,tv_delaymapchange",
+        "FieldName":"tv_delaymapchange",
+        "InputType":"checkbox",
+        "ParamFieldName":"tv_delaymapchange",
+        "DefaultValue":"0",
+        "EnumValues":{
+            "False":"0",
+            "True":"1"
+        }
+    },
+    {
+        "DisplayName":"Transmit All",
+        "Category":"Half Life 2 Deathmatch:stadia_controller",
+        "Subcategory":"SourceTV:tv:4",
+        "Description":" If enabled, the whole game is transmitted and spectators can switch their view to any player they want.",
+        "Keywords":"sourcetv,tv,tv_transmitall",
+        "FieldName":"tv_transmitall",
+        "InputType":"checkbox",
+        "ParamFieldName":"tv_transmitall",
+        "DefaultValue":"0",
+        "EnumValues":{
+            "False":"0",
+            "True":"1"
+        }
+    },
+    {
+        "DisplayName":"Chat Delay",
+        "Category":"Half Life 2 Deathmatch:stadia_controller",
+        "Subcategory":"SourceTV:tv:4",
+        "Description":"Sets the time before specators can send another message in chat (in seconds)",
+        "Keywords":"spectators,chat,sourcetv,tv,tv_chattimelimit",
+        "FieldName":"tv_chattimelimit",
+        "InputType":"number",
+        "MinValue":"0",
+        "MaxValue":"500",
+        "ParamFieldName":"tv_chattimelimit",
+        "DefaultValue":"0",
+        "Placeholder":"0",
+        "Suffix":"seconds",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Dispatch Mode",
+        "Category":"Half Life 2 Deathmatch:stadia_controller",
+        "Subcategory":"SourceTV:tv:4",
+        "Description":"Sets Source client dispatch mode for connecting clients: 0=never, 1=if appropriate, 2=always",
+        "Keywords":"sourcetv,tv,tv_transmitall",
+        "FieldName":"tv_transmitall",
+        "InputType":"checkbox",
+        "ParamFieldName":"tv_transmitall",
+        "DefaultValue":"0",
+        "EnumValues":{
+            "Never":"0",
+            "If Appropriate":"1",
+			"Always":"2"
+        }
     },
     {
         "DisplayName":"Metamod and SourceMod Management",
