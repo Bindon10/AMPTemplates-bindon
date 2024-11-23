@@ -551,7 +551,7 @@
         "Description":"Sets the voice codec used for in game voice communication",
         "Keywords":"voice,codec,sv_voicecodec",
         "FieldName":"sv_voicecodec",
-        "InputType":"checkbox",
+        "InputType":"enum",
         "ParamFieldName":"sv_voicecodec",
         "DefaultValue":"vaudio_miles",
         "EnumValues":{
