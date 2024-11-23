@@ -933,7 +933,7 @@
         }
     },
     {
-        "DisplayName":"Max Spectators",
+        "DisplayName":"Spectator Limit",
         "Category":"Half Life 2 Deathmatch:stadia_controller",
         "Subcategory":"Spectator Settings:joystick:3",
         "Description":"This sets the amount of players allowed on the spectator team",
@@ -953,9 +953,9 @@
         "Subcategory":"SourceTV:tv:4",
         "Description":"Activates SourceTV on the game server",
         "Keywords":"sourcetv,tv,tv_enable",
-        "FieldName":"tv_enable",
+        "FieldName":"EnableTV",
         "InputType":"checkbox",
-        "ParamFieldName":"tv_enable",
+        "ParamFieldName":"EnableTV",
         "DefaultValue":"0",
         "EnumValues":{
             "False":"0",
@@ -971,18 +971,6 @@
         "FieldName":"tv_name",
         "InputType":"text",
         "ParamFieldName":"tv_name",
-        "DefaultValue":"Half-Life 2 Deathmatch SourceTV",
-        "EnumValues":{}
-    },
-    {
-        "DisplayName":"SourceTV Title",
-        "Category":"Half Life 2 Deathmatch:stadia_controller",
-        "Subcategory":"SourceTV:tv:4",
-        "Description":"Sets a SourceTV broadcast title shown in the spectator GUI",
-        "Keywords":"tv,title,tv_title",
-        "FieldName":"tv_title",
-        "InputType":"text",
-        "ParamFieldName":"tv_title",
         "DefaultValue":"Half-Life 2 Deathmatch SourceTV",
         "EnumValues":{}
     },
