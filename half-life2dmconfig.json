@@ -1077,7 +1077,7 @@
         "EnumValues":{}
     },
     {
-        "DisplayName":"Server Password",
+        "DisplayName":"SourceTV Password",
         "Category":"Half Life 2 Deathmatch:stadia_controller",
         "Subcategory":"SourceTV:tv:4",
         "Description":"Sets required password for connecting spectators. Default is no password",
@@ -1140,9 +1140,9 @@
         "Subcategory":"SourceTV:tv:4",
         "Description":"Sets Source client dispatch mode for connecting clients: 0=never, 1=if appropriate, 2=always",
         "Keywords":"sourcetv,tv,tv_transmitall",
-        "FieldName":"tv_transmitall",
+        "FieldName":"tv_dispatchmode",
         "InputType":"enum",
-        "ParamFieldName":"tv_transmitall",
+        "ParamFieldName":"tv_dispatchmode",
         "DefaultValue":"1",
         "EnumValues":{
             "Never":"0",
