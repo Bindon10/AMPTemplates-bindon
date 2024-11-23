@@ -813,6 +813,21 @@
         }
     },
     {
+        "DisplayName":"Automatic Team Balancing",
+        "Category":"Half Life 2 Deathmatch:stadia_controller",
+        "Subcategory":"Gameplay Settings:joystick:2",
+        "Description":"If set, Teams will be automatically balanced",
+        "Keywords":"balance,team,teams,mp_autoteambalance",
+        "FieldName":"mp_autoteambalance",
+        "InputType":"checkbox",
+        "ParamFieldName":"mp_autoteambalance",
+        "DefaultValue":"0",
+        "EnumValues":{
+            "False":"0",
+            "True":"1"
+        }
+    },
+    {
         "DisplayName":"Enable Flashlight",
         "Category":"Half Life 2 Deathmatch:stadia_controller",
         "Subcategory":"Gameplay Settings:joystick:2",
