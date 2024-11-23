@@ -554,11 +554,12 @@
         "InputType":"enum",
         "ParamFieldName":"sv_voicecodec",
         "DefaultValue":"vaudio_miles",
+		"Placeholder":"vaudio_miles",
         "EnumValues":{
-			"Celt":"vaudio_celt",
-            "Miles":"vaudio_miles",
-            "Minimp3":"vaudio_minimp3",
-			"Speex":"vaudio_speex"
+			"vaudio_celt":"vaudio_celt",
+            "vaudio_miles":"vaudio_miles",
+            "vaudio_minimp3":"vaudio_minimp3",
+			"vaudio_speex":"vaudio_speex"
         }
     },
     {
