@@ -1140,9 +1140,9 @@
         "Description":"Sets Source client dispatch mode for connecting clients: 0=never, 1=if appropriate, 2=always",
         "Keywords":"sourcetv,tv,tv_transmitall",
         "FieldName":"tv_transmitall",
-        "InputType":"checkbox",
+        "InputType":"enum",
         "ParamFieldName":"tv_transmitall",
-        "DefaultValue":"0",
+        "DefaultValue":"1",
         "EnumValues":{
             "Never":"0",
             "If Appropriate":"1",
