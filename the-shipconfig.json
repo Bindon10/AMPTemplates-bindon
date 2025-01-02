@@ -724,21 +724,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Maximum Round Limit",
-        "Category": "The Ship:stadia_controller",
-        "Subcategory": "Gameplay:joystick:2",
-        "Description": "Sets the maximum number of rounds to play before the map rotates. 0 = disabled",
-        "Keywords": "round,limit,rotation,mp_maxrounds",
-        "FieldName": "mp_maxrounds",
-        "InputType": "number",
-        "MinValue": "0",
-        "ParamFieldName": "mp_maxrounds",
-        "DefaultValue": "0",
-        "Placeholder": "0",
-        "Suffix": "rounds",
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Frag Limit",
         "Category": "The Ship:stadia_controller",
         "Subcategory": "Gameplay:joystick:2",
@@ -1001,36 +986,6 @@
         "ParamFieldName": "tv_password",
         "DefaultValue": "",
         "EnumValues": {}
-    },
-    {
-        "DisplayName": "Relay Voice",
-        "Category": "The Ship:stadia_controller",
-        "Subcategory": "SourceTV:tv:4",
-        "Description": "If enabled, allow player voice chat if broadcasted",
-        "Keywords": "sourcetv,tv,tv_delaymapchange",
-        "FieldName": "tv_relayvoice",
-        "InputType": "checkbox",
-        "ParamFieldName": "tv_relayvoice",
-        "DefaultValue": "0",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
-        }
-    },
-    {
-        "DisplayName": "Transmit All",
-        "Category": "The Ship:stadia_controller",
-        "Subcategory": "SourceTV:tv:4",
-        "Description": " If enabled, the whole game is transmitted and spectators can switch their view to any player they want",
-        "Keywords": "sourcetv,tv,tv_transmitall",
-        "FieldName": "tv_transmitall",
-        "InputType": "checkbox",
-        "ParamFieldName": "tv_transmitall",
-        "DefaultValue": "0",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
-        }
     },
     {
         "DisplayName": "Chat Delay",
