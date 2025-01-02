@@ -11,7 +11,7 @@
         "UpdateSourcePlatform":"All",
         "UpdateSource":"FetchURL",
         "UpdateSourceData":"https://raw.githubusercontent.com/Bindon10/AMPTemplates-bindon/dev/the-shipserver.cfg",
-        "UpdateSourceTarget":"{{$FullBaseDir}}ship/cfg",
+        "UpdateSourceTarget":"{{$FullBaseDir}}",
         "UpdateSourceArgs":"AMP_server.cfg",
         "OverwriteExistingFiles":true
     },
