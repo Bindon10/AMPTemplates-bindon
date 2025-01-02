@@ -53,7 +53,7 @@
     {
         "DisplayName":"Initial Map",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Server Settings:settings:1",
+        "Subcategory":"Server:dns:1",
         "Description":"Sets the map to start the server with. If \"Custom\" is selected, Custom Initial Map must also be specified",
         "Keywords":"map",
         "FieldName":"map",
