@@ -911,7 +911,7 @@
         "FieldName": "tv_name",
         "InputType": "text",
         "ParamFieldName": "tv_name",
-        "DefaultValue": "Half-Life 2 Deathmatch SourceTV",
+        "DefaultValue": "The Ship: Murder Party SourceTV",
         "EnumValues": {}
     },
     {
