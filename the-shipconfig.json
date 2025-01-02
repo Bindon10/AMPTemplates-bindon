@@ -1,17 +1,5 @@
 [
     {
-        "DisplayName": "RCON Password",
-        "Category": "The Ship:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "",
-        "Keywords": "",
-        "FieldName": "$RemoteAdminPassword",
-        "InputType": "text",
-        "Hidden": true,
-        "ParamFieldName": "rcon_password",
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Server Name",
         "Category": "The Ship:stadia_controller",
         "Subcategory": "Server:dns:1",
