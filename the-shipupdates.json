@@ -11,7 +11,7 @@
         "UpdateStageName":"Config Template Download",
         "UpdateSourcePlatform":"All",
         "UpdateSource":"FetchURL",
-        "UpdateSourceData":"https://raw.githubusercontent.com/Bindon10/AMPTemplates/dev/the-shipserver.cfg",
+        "UpdateSourceData":"https://raw.githubusercontent.com/Bindon10/AMPTemplates-bindon/dev/the-shipserver.cfg",
         "UpdateSourceTarget":"{{$FullBaseDir}}ship/cfg",
         "UpdateSourceArgs":"server.cfg",
         "OverwriteExistingFiles":true
@@ -93,11 +93,11 @@
         "UpdateSourceConditionValue":"false"
     },
     {
-        "UpdateStageName":"Initialise Wine",
-        "UpdateSourcePlatform":"Linux",
-        "UpdateSource":"Executable",
-        "UpdateSourceData":"/bin/bash",
-        "UpdateSourceArgs":"-c \"WINEPREFIX=\\\"{{$FullRootDir}}.wine\\\" WINEARCH=win64 WINEDEBUG=-all /usr/bin/wineboot --init --update\"",
-        "SkipOnFailure":false
+        "UpdateStageName": "Initialise Wine",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"WINEPREFIX=\\\"{{$FullRootDir}}.wine\\\" WINEARCH=win64 WINEDEBUG=-all /usr/bin/wineboot --init --update\"",
+        "SkipOnFailure": false
     }
 ]
