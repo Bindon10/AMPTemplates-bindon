@@ -4,7 +4,8 @@
         "UpdateSourcePlatform":"All",
         "UpdateSource":"SteamCMD",
         "UpdateSourceData":"2403",
-        "UpdateSourceArgs":"2400"
+        "UpdateSourceArgs":"2400",
+		"ForceDownloadPlatform":"Windows"
     },
     {
         "UpdateStageName":"Config Template Download",
