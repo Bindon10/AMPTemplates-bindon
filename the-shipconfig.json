@@ -20,7 +20,7 @@
         "FieldName": "hostname",
         "InputType": "text",
         "ParamFieldName": "hostname",
-        "DefaultValue": "AMP Powered The Ship: Murder Party Server",
+        "DefaultValue": "AMP Powered The Ship Server",
         "EnumValues": {}
     },
     {
@@ -676,39 +676,6 @@
         }
     },
     {
-        "DisplayName": "Voice Codec",
-        "Category": "The Ship:stadia_controller",
-        "Subcategory": "Gameplay:joystick:2",
-        "Description": "Sets the voice codec used for in-game voice communication",
-        "Keywords": "voice,codec,sv_voicecodec",
-        "FieldName": "sv_voicecodec",
-        "InputType": "enum",
-        "ParamFieldName": "sv_voicecodec",
-        "DefaultValue": "vaudio_celt",
-        "EnumValues": {
-            "vaudio_speex": "Legacy Speex codec (lowest quality)",
-            "vaudio_celt": "Newer CELT codec (22kHz, 22kbps)",
-            "vaudio_celt_high": "Newer CELT codec, higher bitrate (44kHz, 44kbps)",
-            "steam": "Steam voice API"
-        }
-    },
-    {
-        "DisplayName": "Team Balancing Mode",
-        "Category": "The Ship:stadia_controller",
-        "Subcategory": "Gameplay:joystick:2",
-        "Description": "Sets the team balancing mode",
-        "Keywords": "balance,team,teams,mp_autoteambalance",
-        "FieldName": "mp_autoteambalance",
-        "InputType": "enum",
-        "ParamFieldName": "mp_autoteambalance",
-        "DefaultValue": "0",
-        "EnumValues": {
-            "0": "Off (default)",
-            "1": "Forcibly switch players",
-            "2": "Ask for volunteers"
-        }
-    },
-    {
         "DisplayName": "Map Rotation Time Limit",
         "Category": "The Ship:stadia_controller",
         "Subcategory": "Gameplay:joystick:2",
@@ -858,21 +825,6 @@
         }
     },
     {
-        "DisplayName": "Spectator Limit",
-        "Category": "The Ship:stadia_controller",
-        "Subcategory": "Spectators:eyeglasses:3",
-        "Description": "This sets the amount of players allowed on the spectator team",
-        "Keywords": "maximum,limit,spectators,mm_max_spectators",
-        "FieldName": "mm_max_spectators",
-        "InputType": "number",
-        "MinValue": "0",
-        "MaxValue": "100",
-        "ParamFieldName": "mm_max_spectators",
-        "DefaultValue": "4",
-        "Placeholder": "4",
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Disable SourceTV",
         "Category": "The Ship:stadia_controller",
         "Subcategory": "SourceTV:tv:4",
@@ -896,7 +848,7 @@
         "FieldName": "tv_name",
         "InputType": "text",
         "ParamFieldName": "tv_name",
-        "DefaultValue": "The Ship: Murder Party SourceTV",
+        "DefaultValue": "The Ship SourceTV",
         "EnumValues": {}
     },
     {
