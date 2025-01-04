@@ -1291,7 +1291,7 @@
         "DisplayName":"Disable Mode Voting",
         "Category":"The Ship:stadia_controller",
         "Subcategory":"Server:dns:1",
-        "Description":"Sets whether the gamemode voting system is enabled",
+        "Description":"Sets whether the gamemode voting system is disabled",
         "Keywords":"votemode,mode,modes,voting,vote",
         "FieldName":"votemode_disable",
         "InputType":"checkbox",
