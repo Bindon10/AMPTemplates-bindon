@@ -1262,13 +1262,13 @@
         "Description":"Sets whether the Votekick system is disabled",
         "Keywords":"kick,votekick,bans,ban,vote,votes",
         "FieldName":"votekick_disable",
-        "InputType":"enum",
+        "InputType":"checkbox",
         "ParamFieldName":"votekick_disable",
         "IncludeInCommandLine":false,
         "DefaultValue":"0",
         "EnumValues":{
-            "0":"False",
-            "1":"true"
+            "False":"0",
+            "True":"1"
         }
     },
     {
@@ -1278,13 +1278,13 @@
         "Description":"Sets whether the Map Vote system is disabled",
         "Keywords":"votemap,map,maps,vote,votes",
         "FieldName":"votemap_disable",
-        "InputType":"enum",
+        "InputType":"checkbox",
         "ParamFieldName":"votemap_disable",
         "IncludeInCommandLine":false,
         "DefaultValue":"0",
         "EnumValues":{
-            "0":"False",
-            "1":"true"
+            "False":"0",
+            "True":"1"
         }
     },
     {
@@ -1294,13 +1294,13 @@
         "Description":"Sets whether the gamemode voting system is enabled",
         "Keywords":"votemode,mode,modes,voting,vote",
         "FieldName":"votemode_disable",
-        "InputType":"enum",
+        "InputType":"checkbox",
         "ParamFieldName":"votemode_disable",
         "IncludeInCommandLine":false,
         "DefaultValue":"0",
         "EnumValues":{
-            "0":"False",
-            "1":"true"
+            "False":"0",
+            "True":"1"
         }
     },
     {
