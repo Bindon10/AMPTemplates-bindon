@@ -401,36 +401,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Enable Cooperative Play",
-        "Category": "The Ship:stadia_controller",
-        "Subcategory": "Gameplay:joystick:2",
-        "Description": "If set, cooperative play will be enabled",
-        "Keywords": "enable,coop,cooperative,play",
-        "FieldName": "coop",
-        "InputType": "checkbox",
-        "ParamFieldName": "coop",
-        "DefaultValue": "0",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
-        }
-    },
-    {
-        "DisplayName": "Enable Deathmatch",
-        "Category": "The Ship:stadia_controller",
-        "Subcategory": "Gameplay:joystick:2",
-        "Description": "If set, deathmatch will be enabled",
-        "Keywords": "enable,deathmatch",
-        "FieldName": "deathmatch",
-        "InputType": "checkbox",
-        "ParamFieldName": "deathmatch",
-        "DefaultValue": "0",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
-        }
-    },
-    {
         "DisplayName": "Maximum Velocity",
         "Category": "The Ship:stadia_controller",
         "Subcategory": "Gameplay:joystick:2",
@@ -996,7 +966,7 @@
         "FieldName": "MetamodBranch",
         "InputType": "enum",
         "ParamFieldName": "MetamodBranch",
-        "DefaultValue": "2.0",
+        "DefaultValue": "1.11",
         "EnumValues": {
             "1.11": "Stable (1.11)",
             "1.12": "Development (1.12)",
@@ -1012,8 +982,8 @@
         "FieldName": "MetamodBuild",
         "InputType": "number",
         "ParamFieldName": "MetamodBuild",
-        "DefaultValue": "1315",
-        "Placeholder": "1315",
+        "DefaultValue": "1156",
+        "Placeholder": "1156",
         "EnumValues": {}
     },
     {
@@ -1025,7 +995,7 @@
         "FieldName": "SourceModBranch",
         "InputType": "enum",
         "ParamFieldName": "SourceModBranch",
-        "DefaultValue": "1.13",
+        "DefaultValue": "1.12",
         "EnumValues": {
             "1.11": "Old stable (1.11)",
             "1.12": "Stable (1.12) (default)",
@@ -1041,8 +1011,8 @@
         "FieldName": "SourceModBuild",
         "InputType": "number",
         "ParamFieldName": "SourceModBuild",
-        "DefaultValue": "7169",
-        "Placeholder": "7169",
+        "DefaultValue": "7176",
+        "Placeholder": "7176",
         "EnumValues": {}
     },
     {
