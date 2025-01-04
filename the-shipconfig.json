@@ -20,7 +20,7 @@
         "FieldName": "hostname",
         "InputType": "text",
         "ParamFieldName": "hostname",
-        "DefaultValue": "AMP Powered The Ship Server",
+        "DefaultValue": "AMP Powered The Ship: Murder Party Server",
         "EnumValues": {}
     },
     {
@@ -550,7 +550,7 @@
         "FieldName": "mp_forcerespawn",
         "InputType": "checkbox",
         "ParamFieldName": "mp_forcerespawn",
-        "DefaultValue": "1",
+        "DefaultValue": "0",
         "EnumValues": {
             "False": "0",
             "True": "1"
@@ -569,21 +569,6 @@
         "DefaultValue": "320",
         "Placeholder": "320",
         "EnumValues": {}
-    },
-    {
-        "DisplayName": "Enable Friendly Fire",
-        "Category": "The Ship:stadia_controller",
-        "Subcategory": "Gameplay:joystick:2",
-        "Description": "If set, friendly fire will be enabled (teammates can cause damage to other teammates)",
-        "Keywords": "friendly,fire,mp_friendlyfire",
-        "FieldName": "mp_friendlyfire",
-        "InputType": "checkbox",
-        "ParamFieldName": "mp_friendlyfire",
-        "DefaultValue": "0",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
-        }
     },
     {
         "DisplayName": "Enable Footsteps",
@@ -639,50 +624,6 @@
         "FieldName": "sv_alltalk",
         "InputType": "checkbox",
         "ParamFieldName": "sv_alltalk",
-        "DefaultValue": "0",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
-        }
-    },
-    {
-        "DisplayName": "Map Rotation Time Limit",
-        "Category": "The Ship:stadia_controller",
-        "Subcategory": "Gameplay:joystick:2",
-        "Description": "Sets the time period between map rotations. 0 = disabled",
-        "Keywords": "time,limit,rotation,mp_timelimit",
-        "FieldName": "mp_timelimit",
-        "InputType": "number",
-        "MinValue": "0",
-        "ParamFieldName": "mp_timelimit",
-        "DefaultValue": "0",
-        "Placeholder": "0",
-        "Suffix": "minutes",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Frag Limit",
-        "Category": "The Ship:stadia_controller",
-        "Subcategory": "Gameplay:joystick:2",
-        "Description": "Sets the frag limit (number of kills) before the map rotates. 0 = disabled",
-        "Keywords": "frag,kills,limit,mp_fraglimit",
-        "FieldName": "mp_fraglimit",
-        "InputType": "number",
-        "MinValue": "0",
-        "ParamFieldName": "mp_fraglimit",
-        "DefaultValue": "0",
-        "Placeholder": "0",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Enable Teamplay",
-        "Category": "The Ship:stadia_controller",
-        "Subcategory": "Gameplay:joystick:2",
-        "Description": "If set, teamplay will be enabled",
-        "Keywords": "team,teamplay,mp_teamplay",
-        "FieldName": "mp_teamplay",
-        "InputType": "checkbox",
-        "ParamFieldName": "mp_teamplay",
         "DefaultValue": "0",
         "EnumValues": {
             "False": "0",
@@ -1221,7 +1162,7 @@
     {
         "DisplayName":"Innocent kills before being warned",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Gameplay:joystick:2",
+        "Subcategory":"Moderation:dns:5",
         "Description":"Number of innocent kills before a player is warned",
         "Keywords":"bans,warn,warning,innocent,kills,kill",
         "FieldName":"ship_kick_innocent_kills_warning",
@@ -1237,7 +1178,7 @@
     {
         "DisplayName":"Innocent kills before being kicked and banned",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Gameplay:joystick:2",
+        "Subcategory":"Moderation:dns:5",
         "Description":"Number of innocent kills before a player is kicked and banned",
         "Keywords":"bans,warn,warning,innocent,kills,kill",
         "FieldName":"ship_kick_innocent_kills",
@@ -1253,7 +1194,7 @@
     {
         "DisplayName":"Bank Balance before warning",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Gameplay:joystick:2",
+        "Subcategory":"Moderation:dns:5",
         "Description":"Bank balance required before a player is warned",
         "Keywords":"bans,warn,warning,bank,balance,money",
         "FieldName":"ship_kick_cash_warning",
@@ -1269,7 +1210,7 @@
     {
         "DisplayName":"Bank Balance before kick and ban",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Gameplay:joystick:2",
+        "Subcategory":"Moderation:dns:5",
         "Description":"Bank balance required before a player is kicked and banned",
         "Keywords":"bans,warn,warning,bank,balance,money",
         "FieldName":"ship_kick_cash",
@@ -1285,7 +1226,7 @@
     {
         "DisplayName":"Kick/Ban Duration",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Gameplay:joystick:2",
+        "Subcategory":"Moderation:dns:5",
         "Description":"Duration in minutes for which players are kicked/banned",
         "Keywords":"bans,warn,warning,kick",
         "FieldName":"ship_kick_ban_minutes",
@@ -1301,7 +1242,7 @@
     {
         "DisplayName":"Kick/Ban Duration after vote",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Gameplay:joystick:2",
+        "Subcategory":"Moderation:dns:5",
         "Description":"Duration in minutes for which players are kicked/banned after a vote",
         "Keywords":"bans,warn,warning,kick",
         "FieldName":"ship_kick_vote_ban_minutes",
@@ -1317,7 +1258,7 @@
     {
         "DisplayName":"Disable Votekick",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Gameplay:joystick:2",
+        "Subcategory":"Server:dns:1",
         "Description":"Sets whether the Votekick system is disabled",
         "Keywords":"kick,votekick,bans,ban,vote,votes",
         "FieldName":"votekick_disable",
@@ -1333,7 +1274,7 @@
     {
         "DisplayName":"Disable Map Voting",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Gameplay:joystick:2",
+        "Subcategory":"Server:dns:1",
         "Description":"Sets whether the Map Vote system is disabled",
         "Keywords":"votemap,map,maps,vote,votes",
         "FieldName":"votemap_disable",
@@ -1349,7 +1290,7 @@
     {
         "DisplayName":"Disable Mode Voting",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Gameplay:joystick:2",
+        "Subcategory":"Server:dns:1",
         "Description":"Sets whether the gamemode voting system is enabled",
         "Keywords":"votemode,mode,modes,voting,vote",
         "FieldName":"votemode_disable",
@@ -1365,7 +1306,7 @@
     {
         "DisplayName":"Vote Cooldown",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Gameplay:joystick:2",
+        "Subcategory":"Server:dns:1",
         "Description":"Duration in seconds in which a player must wait before calling another vote",
         "Keywords":"votes,vote,cooldown,Duration",
         "FieldName":"ship_vote_pause_time_seconds",
@@ -1578,34 +1519,6 @@
         "ParamFieldName": "SourceModBuild",
         "DefaultValue": "7176",
         "Placeholder": "7176",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Proton GE Release (Linux)",
-        "Category": "Updates",
-        "Subcategory": "Runtime Configuration:build:3",
-        "Description": "Sets the Proton GE release build to install. If \"Specific version\" is selected, the version must be set under Specific Proton GE Release Version. Update the server after changing this setting",
-        "Keywords": "proton,release,latest,specific",
-        "FieldName": "ProtonRelease",
-        "InputType": "enum",
-        "ParamFieldName": "ProtonRelease",
-        "DefaultValue": "latest",
-        "EnumValues": {
-            "latest": "Latest (default)",
-            "specificversion": "Specific version"
-        }
-    },
-    {
-        "DisplayName": "Specific Proton GE Release Version",
-        "Category": "Updates",
-        "Subcategory": "Runtime Configuration:build:3",
-        "Description": "Sets the [release version](https://github.com/GloriousEggroll/proton-ge-custom/releases) for a specific Proton GE release build to install, if \"Specific version\" is selected under Proton GE Release. Example: GE-Proton9-1",
-        "Keywords": "proton,release,specific,version",
-        "FieldName": "SpecificReleaseVersion",
-        "InputType": "text",
-        "ParamFieldName": "SpecificReleaseVersion",
-        "DefaultValue": "",
-        "Placeholder": "GE-Proton9-1",
         "EnumValues": {}
     }
 ]
