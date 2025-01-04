@@ -46,7 +46,7 @@ App.ExitString=quit
 App.ExitFile=lock
 App.HasWriteableConsole=False
 App.HasReadableConsole=True
-App.UDPLogger=false
+App.UDPLogger=true
 App.SupportsLiveSettingsChanges=False
 App.LiveSettingChangeCommandFormat=set {0} "{1}"
 App.ForceIPBinding=True
@@ -78,7 +78,7 @@ App.SteamUpdateAnonymousLogin=False
 App.SteamForceLoginPrompt=True
 App.RapidStartup=False
 App.DumpFullChildProcessTree=False
-App.MonitorChildProcessName=^.*srcds\.exe.*Port={{$GamePort}}.*$
+App.MonitorChildProcessName=
 App.SupportsUniversalSleep=False
 App.WakeupMode=Any
 App.ApplicationReadyMode=RCONConnected
