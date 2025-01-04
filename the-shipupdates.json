@@ -20,7 +20,7 @@
         "UpdateStageName":"Steam API Fix",
         "UpdateSourcePlatform":"Windows",
         "UpdateSource":"FetchURL",
-        "UpdateSourceData":"https://raw.githubusercontent.com/Bindon10/AMPTemplates-bindon/main/shipwin.zip",
+        "UpdateSourceData":"https://raw.githubusercontent.com/Bindon10/AMPTemplates-bindon/dev/shipwin.zip",
         "UpdateSourceTarget":"{{$FullBaseDir}}",
         "UnzipUpdateSource":true,
         "OverwriteExistingFiles":true,
