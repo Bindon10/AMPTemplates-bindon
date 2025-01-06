@@ -221,7 +221,7 @@
     },
     {
         "DisplayName": "Custom Gamemode",
-        "Category": "Chivalry Deadliest Warrior: stadia_controller",
+        "Category": "Chivalry Deadliest Warrior:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "Sets a custom gamemode to use, if Use Custom Gamemode is enabled. Use Workshop Items to install the custom gamemode",
         "Keywords": "custom,gamemode",
