@@ -8,6 +8,14 @@
 		"ForceDownloadPlatform":"Windows"
     },
     {
+        "UpdateStageName":"SteamCMD SDK Download",
+        "UpdateSourcePlatform":"All",
+        "UpdateSource":"SteamCMD",
+        "UpdateSourceData":"1007",
+        "UpdateSourceArgs":"1007",
+		"ForceDownloadPlatform":"Windows"
+    },
+    {
         "UpdateStageName":"Config Template Download",
         "UpdateSourcePlatform":"All",
         "UpdateSource":"FetchURL",
