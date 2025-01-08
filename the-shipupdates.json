@@ -13,6 +13,7 @@
         "UpdateSource":"SteamCMD",
         "UpdateSourceData":"1007",
         "UpdateSourceArgs":"1007",
+		"UpdateSourceTarget":"{{$FullBaseDir}}",
 		"ForceDownloadPlatform":"Windows"
     },
     {
