@@ -384,7 +384,7 @@
         "DisplayName": "Lan Maximum Tickrate",
         "Category": "Chivalry Medieval Warfare:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description":"Sets the maximum Tickrate the LAN server will use",
+        "Description": "Sets the maximum Tickrate the LAN server will use",
         "Keywords": "max,tickrate,tick,Maxtick",
         "FieldName": "LanServerMaxTickRate",
         "InputType": "number",

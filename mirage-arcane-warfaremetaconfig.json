@@ -1,12 +1,12 @@
 [	
     {
-        "ConfigFile":"TBL/Config/DefaultGame.ini", 
-        "AutoMap":true,
-        "ConfigType":"ini"
+        "ConfigFile": "TBL/Config/DefaultGame.ini", 
+        "AutoMap": true,
+        "ConfigType": "ini"
     },
 	{
-		"ConfigFile":"TBL/Config/DefaultEngine.ini",
-		"AutoMap":true,
-		"ConfigType":"ini"
+		"ConfigFile": "TBL/Config/DefaultEngine.ini",
+		"AutoMap": true,
+		"ConfigType": "ini"
 	}
 ]
