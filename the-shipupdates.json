@@ -15,6 +15,7 @@
         "UpdateSourceArgs":"1007",
 		"UpdateSourceTarget":"{{$FullBaseDir}}",
 		"ForceDownloadPlatform":"Windows"
+        "OverwriteExistingFiles":true
     },
     {
         "UpdateStageName":"Config Template Download",
