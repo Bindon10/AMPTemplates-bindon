@@ -16,16 +16,6 @@
         "UpdateSourceTarget":"{{$FullRootDir}}",
         "OverwriteExistingFiles":true
     },
-	{
-        "UpdateStageName":"Steam API Fix",
-        "UpdateSourcePlatform":"All",
-        "UpdateSource":"FetchURL",
-        "UpdateSourceData":"https://raw.githubusercontent.com/Bindon10/AMPTemplates-bindon/dev/shipwin.zip",
-        "UpdateSourceTarget":"{{$FullBaseDir}}",
-        "UnzipUpdateSource":true,
-        "OverwriteExistingFiles":true,
-        "DeleteAfterExtract":true
-    },
     {
         "UpdateStageName": "Metamod Download",
         "UpdateSourcePlatform": "All",
