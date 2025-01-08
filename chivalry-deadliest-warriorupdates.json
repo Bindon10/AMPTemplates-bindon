@@ -22,25 +22,15 @@
         "UpdateSourceArgs": "241280",
         "ForceDownloadPlatform": "Windows"
     },
-	{
-        "UpdateStageName": "Steam API Fix",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://raw.githubusercontent.com/Bindon10/AMPTemplates-bindon/main/steam.zip",
-        "UpdateSourceTarget": "{{$FullBaseDir}}/Binaries/Win64",
-        "UnzipUpdateSource": true,
-        "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": true
-    },
-	{
-        "UpdateStageName": "Steam API Fix",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://raw.githubusercontent.com/Bindon10/AMPTemplates-bindon/main/steam.tar.gz",
-        "UpdateSourceTarget": "{{$FullBaseDir}}/Binaries/Win64",
-        "UnzipUpdateSource": true,
-        "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": true
+    {
+        "UpdateStageName":"SteamCMD Server SDK Fix",
+        "UpdateSourcePlatform":"All",
+        "UpdateSource":"SteamCMD",
+        "UpdateSourceData":"1007",
+        "UpdateSourceArgs":"1007",
+		"UpdateSourceTarget":"{{$FullBaseDir}}/Binaries/Win64",
+		"ForceDownloadPlatform":"Windows",
+        "OverwriteExistingFiles":true
     },
     {
         "UpdateStageName": "Initialise Wine",
