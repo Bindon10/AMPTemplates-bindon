@@ -1,53 +1,43 @@
 [
     {
-        "UpdateStageName":"Config Directory Creation",
-        "UpdateSourcePlatform":"All",
-        "UpdateSource":"CreateDirectory",
-        "UpdateSourceArgs":"{{$FullBaseDir}}CDWGame/Config"
+        "UpdateStageName": "Config Directory Creation",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}CDWGame/Config"
     },
     {
-        "UpdateStageName":"Config Template Download",
-        "UpdateSourcePlatform":"All",
-        "UpdateSource":"FetchURL",
-        "UpdateSourceData":"https://raw.githubusercontent.com/Bindon10/AMPTemplates-bindon/main/chivalry-deadliest-warriorcdwgame.ini",
-        "UpdateSourceTarget":"{{$FullBaseDir}}CDWGame/Config",
-        "UpdateSourceArgs":"PCServer-CDWGame.ini",
-        "OverwriteExistingFiles":false
+        "UpdateStageName": "Config Template Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/Bindon10/AMPTemplates-bindon/main/chivalry-deadliest-warriorcdwgame.ini",
+        "UpdateSourceTarget": "{{$FullBaseDir}}CDWGame/Config",
+        "UpdateSourceArgs": "PCServer-CDWGame.ini",
+        "OverwriteExistingFiles": false
     },
     {
-        "UpdateStageName":"SteamCMD Download",
+        "UpdateStageName": "SteamCMD Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "258680",
+        "UpdateSourceArgs": "241280",
+        "ForceDownloadPlatform": "Windows"
+    },
+    {
+        "UpdateStageName":"SteamCMD Server SDK Fix",
         "UpdateSourcePlatform":"All",
         "UpdateSource":"SteamCMD",
-        "UpdateSourceData":"258680",
-        "UpdateSourceArgs":"241280",
-        "ForceDownloadPlatform":"Windows"
-    },
-	{
-        "UpdateStageName":"Steam API Fix",
-        "UpdateSourcePlatform":"Windows",
-        "UpdateSource":"FetchURL",
-        "UpdateSourceData":"https://raw.githubusercontent.com/Bindon10/AMPTemplates-bindon/main/steam.zip",
-        "UpdateSourceTarget":"{{$FullBaseDir}}/Binaries/Win64",
-        "UnzipUpdateSource":true,
-        "OverwriteExistingFiles":true,
-        "DeleteAfterExtract":true
-    },
-	{
-        "UpdateStageName":"Steam API Fix",
-        "UpdateSourcePlatform":"Linux",
-        "UpdateSource":"FetchURL",
-        "UpdateSourceData":"https://raw.githubusercontent.com/Bindon10/AMPTemplates-bindon/main/steam.tar.gz",
-        "UpdateSourceTarget":"{{$FullBaseDir}}/Binaries/Win64",
-        "UnzipUpdateSource":true,
-        "OverwriteExistingFiles":true,
-        "DeleteAfterExtract":true
+        "UpdateSourceData":"1007",
+        "UpdateSourceArgs":"1007",
+		"UpdateSourceTarget":"{{$FullBaseDir}}/Binaries/Win64",
+		"ForceDownloadPlatform":"Windows",
+        "OverwriteExistingFiles":true
     },
     {
-        "UpdateStageName":"Initialise Wine",
-        "UpdateSourcePlatform":"Linux",
-        "UpdateSource":"Executable",
-        "UpdateSourceData":"/bin/bash",
-        "UpdateSourceArgs":"-c 'WINEPREFIX=\"{{$FullRootDir}}.wine\" WINEARCH=win64 WINEDEBUG=-all /usr/bin/wineboot --init --update'",
-        "SkipOnFailure":false
+        "UpdateStageName": "Initialise Wine",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"WINEPREFIX=\\\"{{$FullRootDir}}.wine\\\" WINEARCH=win64 WINEDEBUG=-all /usr/bin/wineboot --init --update\"",
+        "SkipOnFailure": false
     }
 ]
