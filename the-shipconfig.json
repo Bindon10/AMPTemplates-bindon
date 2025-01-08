@@ -646,21 +646,6 @@
         }
     },
     {
-        "DisplayName": "Allow NPCs",
-        "Category": "The Ship:stadia_controller",
-        "Subcategory": "Gameplay:joystick:2",
-        "Description": "If set, NPCs will be enabled",
-        "Keywords": "bot,bots,npcs,mp_allowNPCs",
-        "FieldName": "mp_allowNPCs",
-        "InputType": "checkbox",
-        "ParamFieldName": "mp_allowNPCs",
-        "DefaultValue": "1",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
-        }
-    },
-    {
         "DisplayName": "Enable Auto Crosshair",
         "Category": "The Ship:stadia_controller",
         "Subcategory": "Gameplay:joystick:2",
@@ -1258,7 +1243,7 @@
     {
         "DisplayName":"Disable Votekick",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Server:dns:1",
+        "Subcategory":"Moderation:dns:5",
         "Description":"Sets whether the Votekick system is disabled",
         "Keywords":"kick,votekick,bans,ban,vote,votes",
         "FieldName":"votekick_disable",
@@ -1274,7 +1259,7 @@
     {
         "DisplayName":"Disable Map Voting",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Server:dns:1",
+        "Subcategory":"Moderation:dns:5",
         "Description":"Sets whether the Map Vote system is disabled",
         "Keywords":"votemap,map,maps,vote,votes",
         "FieldName":"votemap_disable",
@@ -1290,7 +1275,7 @@
     {
         "DisplayName":"Disable Mode Voting",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Server:dns:1",
+        "Subcategory":"Moderation:dns:5",
         "Description":"Sets whether the gamemode voting system is disabled",
         "Keywords":"votemode,mode,modes,voting,vote",
         "FieldName":"votemode_disable",
@@ -1306,7 +1291,7 @@
     {
         "DisplayName":"Vote Cooldown",
         "Category":"The Ship:stadia_controller",
-        "Subcategory":"Server:dns:1",
+        "Subcategory":"Moderation:dns:5",
         "Description":"Duration in seconds in which a player must wait before calling another vote",
         "Keywords":"votes,vote,cooldown,Duration",
         "FieldName":"ship_vote_pause_time_seconds",
