@@ -12,7 +12,7 @@
         "UpdateSourcePlatform": "All",
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "1007",
-        "UpdateSourceArgs": "1007",
+        "UpdateSourceArgs": "2403",
 		"UpdateSourceTarget":"{{$FullBaseDir}}",
 		"ForceDownloadPlatform": "Windows",
         "OverwriteExistingFiles": true
