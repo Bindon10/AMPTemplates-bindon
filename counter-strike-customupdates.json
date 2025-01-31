@@ -3,7 +3,7 @@
         "UpdateStageName": "Server Download",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
-        "UpdateSourceData": "{{SupremacyBuild}}",
+        "UpdateSourceData": "{{URLBuild}}",
         "UpdateSourceTarget": "{{$FullBaseDir}}",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,

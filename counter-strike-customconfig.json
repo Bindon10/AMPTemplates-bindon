@@ -20,7 +20,7 @@
         "FieldName": "hostname",
         "InputType": "text",
         "ParamFieldName": "hostname",
-        "DefaultValue": "AMP Powered Counter-Strike: Supremacy Server",
+        "DefaultValue": "AMP Powered Counter-Strike: Custom Server",
         "EnumValues": {}
     },
     {
