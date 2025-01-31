@@ -218,7 +218,7 @@
         "DisplayName": "Map Group",
         "Category": "CSGO:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the map group to load to enable map rotation. Alternatively specify a Workshop Collection ID which includes the maps required for rotation",
+        "Description": "Sets the map group to load to enable map rotation. Alternatively specify a an alternate collection which includes the maps required for rotation",
         "Keywords": "map,group,mapgroup",
         "FieldName": "mapgroup",
         "InputType": "text",
@@ -226,21 +226,6 @@
         "DefaultValue": "",
         "Placeholder": "mg_allclassic",
         "EnumValues": {}
-    },
-    {
-        "DisplayName": "Allow Other Map By Players",
-        "Category": "CSGO:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, and when the server is hosting a workshop collection, players will be able to play another workshop map on the server when it is empty and then rotate their map cycle into the server collection",
-        "Keywords": "workshop,map,allow,other,sv_workshop_allow_other_maps",
-        "FieldName": "sv_workshop_allow_other_maps",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_workshop_allow_other_maps",
-        "DefaultValue": "1",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
-        }
     },
     {
         "DisplayName": "Player Limit",
@@ -820,6 +805,22 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Metamod and SourceMod Management",
+        "Category": "Updates",
+        "Subcategory": "Metamod and SourceMod:build:3",
+        "Description": "Sets how to manage Metamod and SourceMod on the server. Branch and Build Versions must be set accordingly for installation. Update the server after changing this setting (unless \"Do nothing\" is selected)",
+        "Keywords": "install,metamod,sourcemod",
+        "FieldName": "InstallMod",
+        "InputType": "enum",
+        "ParamFieldName": "InstallMod",
+        "DefaultValue": "none",
+        "EnumValues": {
+            "none": "Do nothing (default)",
+            "false": "Deactivate mods",
+            "true": "Install and activate mods"
+        }
+    },
+    {
         "DisplayName": "Metamod Branch",
         "Category": "Updates",
         "Subcategory": "Metamod and SourceMod:build:3",
@@ -911,7 +912,7 @@
         "DisplayName": "Server Download URL",
         "Category": "Updates",
         "Subcategory": "Server Download:build:4",
-        "Description": "Specifies the download link for the server build to install.",
+        "Description": "Specifies the download link for the server build to install, this should be a ZIP file (but on linux tar.gz is acceptable)",
         "Keywords": "download,build,version,URL",
         "FieldName": "URLBuild",
         "InputType": "text",
