@@ -44,6 +44,8 @@
         "UpdateSourceData": "/bin/bash",
         "UpdateSourceArgs": "-c \"MetamodBuild=\\\"{{MetamodBuild}}\\\" && ModBranch=\\\"{{ModBranch}}\\\" && if [[ -z \\\"$MetamodBuild\\\" ]]; then LatestMetamodFile=$(wget -qO- https://mms.alliedmods.net/mmsdrop/$ModBranch/mmsource-latest-linux) && wget -qO metamod.tar.gz https://mms.alliedmods.net/mmsdrop/$ModBranch/$LatestMetamodFile && echo \\\"Latest Metamod $ModBranch build downloaded\\\"; elif [[ ! \\\"$MetamodBuild\\\" =~ ^[0-9]+$ ]]; then echo \\\"Invalid Metamod build version format specified\\\" && exit 1; else wget -qO metamod.tar.gz https://mms.alliedmods.net/mmsdrop/$ModBranch/mmsource-$ModBranch.0-git$MetamodBuild-linux.tar.gz && echo \\\"Metamod $ModBranch build $MetamodBuild downloaded\\\"; fi\"",
         "SkipOnFailure": false
+        "UpdateSourceConditionSetting": "InstallMod",
+        "UpdateSourceConditionValue": "true"
     },
     {
         "UpdateStageName": "Metamod Download",
@@ -52,6 +54,8 @@
         "UpdateSourceData": "powershell.exe",
         "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; $MetamodBuild='{{MetamodBuild}}'; $ModBranch='{{ModBranch}}'; if ([string]::IsNullOrWhiteSpace($MetamodBuild)) { $LatestMetamodFile=(Invoke-RestMethod -UseBasicParsing -Uri https://mms.alliedmods.net/mmsdrop/$ModBranch/mmsource-latest-windows); Invoke-WebRequest -UseBasicParsing -Uri https://mms.alliedmods.net/mmsdrop/$ModBranch/$LatestMetamodFile -OutFile 'metamod.zip'; if ($?) { Write-Output \\\"Latest Metamod $ModBranch build downloaded\\\"; } } elseif ($MetamodBuild -notmatch '^\\d+$') { Write-Output \\\"Invalid Metamod build version format specified\\\"; exit 1; } else { Invoke-WebRequest -UseBasicParsing -Uri https://mms.alliedmods.net/mmsdrop/$ModBranch/mmsource-$ModBranch.0-git$MetamodBuild-windows.zip -OutFile 'metamod.zip'; if ($?) { Write-Output \\\"Metamod $ModBranch build $MetamodBuild downloaded\\\"; } }\"",
         "SkipOnFailure": false
+        "UpdateSourceConditionSetting": "InstallMod",
+        "UpdateSourceConditionValue": "true"
     },
     {
         "UpdateStageName": "Metamod Extract",
@@ -62,6 +66,8 @@
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
         "SkipOnFailure": false
+        "UpdateSourceConditionSetting": "InstallMod",
+        "UpdateSourceConditionValue": "true"
     },
     {
         "UpdateStageName": "Metamod Extract",
@@ -72,12 +78,16 @@
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
         "SkipOnFailure": false
+        "UpdateSourceConditionSetting": "InstallMod",
+        "UpdateSourceConditionValue": "true"
     },
     {
         "UpdateStageName": "SourceMod Download Directory Creation",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CreateDirectory",
         "UpdateSourceArgs": "{{$FullBaseDir}}sm"
+        "UpdateSourceConditionSetting": "InstallMod",
+        "UpdateSourceConditionValue": "true"
     },
     {
         "UpdateStageName": "SourceMod Download",
@@ -86,6 +96,8 @@
         "UpdateSourceData": "/bin/bash",
         "UpdateSourceArgs": "-c \"SourceModVersion=\\\"{{SourceModVersion}}\\\" && SourceModBranch=\\\"{{SourceModBranch}}\\\" && if [[ -z \\\"$SourceModVersion\\\" ]]; then LatestSourceModFile=$(wget -qO- https://sm.alliedmods.net/smdrop/$SourceModBranch/sourcemod-latest-linux) && wget -qO sourcemod.tar.gz https://sm.alliedmods.net/smdrop/$SourceModBranch/$LatestSourceModFile && echo \\\"Latest SourceMod $SourceModBranch build downloaded\\\"; elif [[ ! \\\"$SourceModVersion\\\" =~ ^[0-9]+$ ]]; then echo \\\"Invalid SourceMod build version format specified\\\" && exit 1; else wget -qO sourcemod.tar.gz https://sm.alliedmods.net/smdrop/$SourceModBranch/sourcemod-$SourceModBranch.0-git$SourceModVersion-linux.tar.gz && echo \\\"SourceMod $SourceModBranch build $SourceModVersion downloaded\\\"; fi\"",
         "SkipOnFailure": false
+        "UpdateSourceConditionSetting": "InstallMod",
+        "UpdateSourceConditionValue": "true"
     },
     {
         "UpdateStageName": "SourceMod Download",
@@ -94,6 +106,8 @@
         "UpdateSourceData": "powershell.exe",
         "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; $SourceModVersion='{{SourceModVersion}}'; $SourceModBranch='{{SourceModBranch}}'; if ([string]::IsNullOrWhiteSpace($SourceModVersion)) { $LatestSourceModFile=(Invoke-RestMethod -UseBasicParsing -Uri https://sm.alliedmods.net/smdrop/$SourceModBranch/sourcemod-latest-windows); Invoke-WebRequest -UseBasicParsing -Uri https://sm.alliedmods.net/smdrop/$SourceModBranch/$LatestSourceModFile -OutFile 'sourcemod.zip'; if ($?) { Write-Output \\\"Latest SourceMod $SourceModBranch build downloaded\\\"; } } elseif ($SourceModVersion -notmatch '^\\d+$') { Write-Output \\\"Invalid SourceMod build version format specified\\\"; exit 1; } else { Invoke-WebRequest -UseBasicParsing -Uri https://sm.alliedmods.net/smdrop/$SourceModBranch/sourcemod-$SourceModBranch.0-git$SourceModVersion-windows.zip -OutFile 'sourcemod.zip'; if ($?) { Write-Output \\\"SourceMod $SourceModBranch build $SourceModVersion downloaded\\\"; } }\"",
         "SkipOnFailure": false
+        "UpdateSourceConditionSetting": "InstallMod",
+        "UpdateSourceConditionValue": "true"
     },
     {
         "UpdateStageName": "SourceMod Extract",
@@ -104,6 +118,8 @@
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
         "SkipOnFailure": false
+        "UpdateSourceConditionSetting": "InstallMod",
+        "UpdateSourceConditionValue": "true"
     },
     {
         "UpdateStageName": "SourceMod Extract",
@@ -114,6 +130,8 @@
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
         "SkipOnFailure": false
+        "UpdateSourceConditionSetting": "InstallMod",
+        "UpdateSourceConditionValue": "true"
     },
     {
         "UpdateStageName": "SourceMod Installation",
@@ -122,6 +140,8 @@
         "UpdateSourceData": "powershell.exe",
         "UpdateSourceArgs": "-NoProfile -Command \"Set-Location -Path 'csgo/740'; if (Test-Path 'csgo/cfg/sourcemod') { Remove-Item -Path 'sm/cfg/sourcemod' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null }; if (Test-Path 'csgo/addons/sourcemod/configs') { Remove-Item -Path 'sm/addons/sourcemod/configs' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null }; if (Test-Path 'csgo/addons/sourcemod/plugins') { Remove-Item -Path 'sm/addons/sourcemod/plugins' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null }; Copy-Item -Path 'sm/*' -Destination 'csgo' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null; Remove-Item -Path 'sm' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null\"",
         "SkipOnFailure": true
+        "UpdateSourceConditionSetting": "InstallMod",
+        "UpdateSourceConditionValue": "true"
     },
     {
         "UpdateStageName": "SourceMod Installation",
@@ -130,6 +150,8 @@
         "UpdateSourceData": "/bin/bash",
         "UpdateSourceArgs": "-c \"cd csgo/740 && [ -d csgo/cfg/sourcemod ] && rm -rf sm/cfg/sourcemod >/dev/null 2>&1; [ -d csgo/addons/sourcemod/configs ] && rm -rf sm/addons/sourcemod/configs >/dev/null 2>&1; [ -d csgo/addons/sourcemod/plugins ] && rm -rf sm/addons/sourcemod/plugins >/dev/null 2>&1; \\cp -rf sm/* csgo/ >/dev/null 2>&1; rm -rf sm >/dev/null 2>&1\"",
         "SkipOnFailure": true
+        "UpdateSourceConditionSetting": "InstallMod",
+        "UpdateSourceConditionValue": "true"
     },
     {
         "UpdateStageName": "Activate Metamod and SourceMod",
@@ -138,6 +160,26 @@
         "UpdateSourceData": "\"Plugin\"\n{\n\t\"file\"\t\"../csgo/addons/metamod/bin/server\"\n}",
         "UpdateSourceArgs": "{{$FullBaseDir}}csgo/addons/metamod.vdf",
         "OverwriteExistingFiles": true
+        "UpdateSourceConditionSetting": "InstallMod",
+        "UpdateSourceConditionValue": "true"
+    },
+    {
+        "UpdateStageName": "Disable Metamod and SourceMod",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "cmd.exe",
+        "UpdateSourceArgs": "/C cd ship\\2403\\ship\\addons > NUL 2>&1 && del /Q /F metamod.vdf > NUL 2>&1 & exit /b 0",
+        "UpdateSourceConditionSetting": "InstallMod",
+        "UpdateSourceConditionValue": "false"
+    },
+    {
+        "UpdateStageName": "Disable Metamod and SourceMod",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd ship/2403/ship/addons >/dev/null 2>&1 && rm -rf metamod.vdf >/dev/null 2>&1; exit 0\"",
+        "UpdateSourceConditionSetting": "InstallMod",
+        "UpdateSourceConditionValue": "false"
     },
     {
         "UpdateStageName": "NoLobbyReservation Plugin Download",
@@ -148,6 +190,8 @@
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true
+        "UpdateSourceConditionSetting": "InstallNLR",
+        "UpdateSourceConditionValue": "true"
     },
     {
         "UpdateStageName": "NoLobbyReservation Gamedata Download",
