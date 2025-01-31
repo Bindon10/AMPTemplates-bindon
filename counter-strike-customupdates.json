@@ -25,7 +25,7 @@
         "UpdateSourcePlatform": "All",
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "740",
-        "UpdateSourceArgs": "730"
+        "UpdateSourceArgs": "730",
         "UpdateSourceConditionSetting": "InstallbyURL",
         "UpdateSourceConditionValue": "false"
     },
@@ -166,7 +166,7 @@
         "UpdateSourceTarget": "{{$FullBaseDir}}csgo/addons/sourcemod/gamedata",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": true
+        "DeleteAfterExtract": true,
         "UpdateSourceConditionSetting": "InstallNLR",
         "UpdateSourceConditionValue": "true"
     },
@@ -178,7 +178,7 @@
         "UpdateSourceTarget": "{{$FullBaseDir}}csgo/addons/sourcemod/scripting",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": true
+        "DeleteAfterExtract": true,
         "UpdateSourceConditionSetting": "InstallNLR",
         "UpdateSourceConditionValue": "true"
     }
