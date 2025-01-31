@@ -1,5 +1,14 @@
 [
     {
+        "UpdateStageName": "SteamCMD SDK Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "1007",
+        "UpdateSourceArgs": "1007",
+		"UpdateSourceTarget":"{{$FullBaseDir}}",
+        "OverwriteExistingFiles": true
+    },
+    {
         "UpdateStageName": "Server Download",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
