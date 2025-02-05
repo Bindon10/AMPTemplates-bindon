@@ -745,6 +745,37 @@
         }
     },
     {
+        "DisplayName": "Bot Quota",
+        "Category": "CSGO:stadia_controller",
+        "Subcategory": "Gameplay:joystick:2",
+        "Description": "Sets the number of bots automatically added on the server.",
+        "Keywords": "bot,limit,quota,bot_quota",
+        "FieldName": "bot_quota",
+        "InputType": "number",
+        "MinValue": "0",
+        "ParamFieldName": "bot_quota",
+        "DefaultValue": "0",
+        "Placeholder": "0",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Bot Quota Mode",
+        "Category": "CSGO:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the mode that bot_quota will use to determine when bots are added",
+        "Keywords": "quota,mode,bot,bots",
+        "FieldName": "bot_quota_mode",
+        "InputType": "enum",
+        "ParamFieldName": "bot_quota_mode",
+        "DefaultValue": "0",
+        "EnumValues": {
+            "normal": "Normal",
+            "fill": "Fill",
+            "match": "Match",
+            "competitive": "Competitive"
+        }
+    },
+    {
         "DisplayName": "Disable SourceTV",
         "Category": "CSGO:stadia_controller",
         "Subcategory": "SourceTV:tv:3",
