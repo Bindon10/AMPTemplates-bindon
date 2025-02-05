@@ -761,7 +761,7 @@
     {
         "DisplayName": "Bot Quota Mode",
         "Category": "CSGO:stadia_controller",
-        "Subcategory": "Server:dns:1",
+        "Subcategory": "Gameplay:joystick:2",
         "Description": "Sets the mode that bot_quota will use to determine when bots are added",
         "Keywords": "quota,mode,bot,bots",
         "FieldName": "bot_quota_mode",
