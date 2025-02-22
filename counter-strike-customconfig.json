@@ -344,7 +344,7 @@
         "FieldName": "insecure",
         "InputType": "checkbox",
         "ParamFieldName": "insecure",
-        "DefaultValue": "",
+        "DefaultValue": "-insecure",
         "EnumValues": {
             "False": "",
             "True": "-insecure "
@@ -784,7 +784,7 @@
         "FieldName": "nohltv",
         "InputType": "checkbox",
         "ParamFieldName": "nohltv",
-        "DefaultValue": "-nohltv ",
+        "DefaultValue": "",
         "EnumValues": {
             "False": "",
             "True": "-nohltv "
