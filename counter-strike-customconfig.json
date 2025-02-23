@@ -799,7 +799,7 @@
         "FieldName": "tv_autorecord",
         "InputType": "checkbox",
         "ParamFieldName": "tv_autorecord",
-        "DefaultValue": "0",
+        "DefaultValue": "1",
         "EnumValues": {
             "False": "0",
             "True": "1"
