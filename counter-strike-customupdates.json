@@ -46,7 +46,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && wget -i links.txt --progress=bar && ../7-Zip/7zzs x -y *.7z.001 >/dev/null 2>&1 && rm -f *.7z.*\"",
+		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && wget -i links.txt -q --show-progress --progress=bar:force 2>&1 && ../7-Zip/7zzs x -y *.7z.001 >/dev/null 2>&1 && rm -f *.7z.*\"",
         "OverwriteExistingFiles": true,
         "SkipOnFailure": false,
         "UpdateSourceConditionSetting": "InstallbyURL",
