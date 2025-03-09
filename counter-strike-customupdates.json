@@ -1,13 +1,54 @@
 [
     {
-        "UpdateStageName": "Server Download",
+        "UpdateStageName": "7-Zip Directory Creation",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullRootDir}}7-Zip"
+    },
+    {
+        "UpdateStageName": "7-Zip Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://www.7-zip.org/a/7z2301-linux-x64.tar.xz",
+        "UpdateSourceTarget": "{{$FullRootDir}}7-Zip",
+        "OverwriteExistingFiles": true
+    },
+    {
+        "UpdateStageName": "7-Zip Files Extract",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd {{FullRootDir}}/7-Zip && tar -xf 7z2301-linux-x64.tar.xz >/dev/null 2>&1 && rm -f 7z2301-linux-x64.tar.xz\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Base Files Download",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "{{URLBuild}}",
         "UpdateSourceTarget": "{{$FullBaseDir}}",
-        "UnzipUpdateSource": true,
+        "UpdateSourceConditionSetting": "InstallbyURL",
+        "UpdateSourceConditionValue": "true"
+    },
+    {
+        "UpdateStageName": "Base Files Extract",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd {{FullBaseDir}} && ../7-Zip/7zzs x -y -p{{BasePassword}} Latest.7z >/dev/null 2>&1 && rm -f Latest.7z\"",
         "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": true,
+        "SkipOnFailure": false
+        "UpdateSourceConditionSetting": "InstallbyURL",
+        "UpdateSourceConditionValue": "true"
+    },
+    {
+        "UpdateStageName": "Game Files Download / Extract",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+		"UpdateSourceArgs": "-c \"cd {{FullBaseDir}} && wget -i links.txt && ../7-Zip/7zzs x -y {{GameFilesName}}.7z.001 >/dev/null 2>&1 && rm -f {{GameFilesName}}.*\"",
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
         "UpdateSourceConditionSetting": "InstallbyURL",
         "UpdateSourceConditionValue": "true"
     },
@@ -21,12 +62,52 @@
         "UpdateSourceConditionValue": "false"
     },
     {
+        "UpdateStageName": "Patch Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "{{PatchURL}}",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": true,
+        "UpdateSourceConditionSetting": "InstallPatch",
+        "UpdateSourceConditionValue": "true"
+    },
+    {
+        "UpdateStageName": "Patch Files Extract",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd {{FullBaseDir}} && ../7-Zip/7zzs x -y Latest.7z >/dev/null 2>&1 && rm -f Latest.7z\"",
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false,
+        "UpdateSourceConditionSetting": "HasPassword",
+        "UpdateSourceConditionValue": "false"
+    },
+    {
+        "UpdateStageName": "Patch Files Extract (Passworded)",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd {{FullBaseDir}} && ../7-Zip/7zzs x -y -p{{PatchPassword}} Latest.7z >/dev/null 2>&1 && rm -f Latest.7z\"",
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false,
+        "UpdateSourceConditionSetting": "HasPassword",
+        "UpdateSourceConditionValue": "true"
+    },
+    {
         "UpdateStageName": "Remove Old Library",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
         "UpdateSourceArgs": "-c \"rm -rf csgo/740/bin/libgcc_s.so.1 >/dev/null 2>&1\"",
-        "SkipOnFailure": true
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Demo Directory Creation",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}csgo/demos"
     },
     {
         "UpdateStageName": "Server.cfg Template File Download",
@@ -48,32 +129,10 @@
         "UpdateSourceConditionValue": "true"
     },
     {
-        "UpdateStageName": "Metamod Download",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; $MetamodBuild='{{MetamodBuild}}'; $ModBranch='{{ModBranch}}'; if ([string]::IsNullOrWhiteSpace($MetamodBuild)) { $LatestMetamodFile=(Invoke-RestMethod -UseBasicParsing -Uri https://mms.alliedmods.net/mmsdrop/$ModBranch/mmsource-latest-windows); Invoke-WebRequest -UseBasicParsing -Uri https://mms.alliedmods.net/mmsdrop/$ModBranch/$LatestMetamodFile -OutFile 'metamod.zip'; if ($?) { Write-Output \\\"Latest Metamod $ModBranch build downloaded\\\"; } } elseif ($MetamodBuild -notmatch '^\\d+$') { Write-Output \\\"Invalid Metamod build version format specified\\\"; exit 1; } else { Invoke-WebRequest -UseBasicParsing -Uri https://mms.alliedmods.net/mmsdrop/$ModBranch/mmsource-$ModBranch.0-git$MetamodBuild-windows.zip -OutFile 'metamod.zip'; if ($?) { Write-Output \\\"Metamod $ModBranch build $MetamodBuild downloaded\\\"; } }\"",
-        "SkipOnFailure": false,
-        "UpdateSourceConditionSetting": "InstallMod",
-        "UpdateSourceConditionValue": "true"
-    },
-    {
         "UpdateStageName": "Metamod Extract",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "ExtractArchive",
         "UpdateSourceData": "metamod.tar.gz",
-        "UpdateSourceTarget": "{{$FullBaseDir}}csgo",
-        "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": true,
-        "SkipOnFailure": false,
-        "UpdateSourceConditionSetting": "InstallMod",
-        "UpdateSourceConditionValue": "true"
-    },
-    {
-        "UpdateStageName": "Metamod Extract",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "ExtractArchive",
-        "UpdateSourceData": "metamod.zip",
         "UpdateSourceTarget": "{{$FullBaseDir}}csgo",
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
@@ -100,16 +159,6 @@
         "UpdateSourceConditionValue": "true"
     },
     {
-        "UpdateStageName": "SourceMod Download",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; $SourceModVersion='{{SourceModVersion}}'; $SourceModBranch='{{SourceModBranch}}'; if ([string]::IsNullOrWhiteSpace($SourceModVersion)) { $LatestSourceModFile=(Invoke-RestMethod -UseBasicParsing -Uri https://sm.alliedmods.net/smdrop/$SourceModBranch/sourcemod-latest-windows); Invoke-WebRequest -UseBasicParsing -Uri https://sm.alliedmods.net/smdrop/$SourceModBranch/$LatestSourceModFile -OutFile 'sourcemod.zip'; if ($?) { Write-Output \\\"Latest SourceMod $SourceModBranch build downloaded\\\"; } } elseif ($SourceModVersion -notmatch '^\\d+$') { Write-Output \\\"Invalid SourceMod build version format specified\\\"; exit 1; } else { Invoke-WebRequest -UseBasicParsing -Uri https://sm.alliedmods.net/smdrop/$SourceModBranch/sourcemod-$SourceModBranch.0-git$SourceModVersion-windows.zip -OutFile 'sourcemod.zip'; if ($?) { Write-Output \\\"SourceMod $SourceModBranch build $SourceModVersion downloaded\\\"; } }\"",
-        "SkipOnFailure": false,
-        "UpdateSourceConditionSetting": "InstallMod",
-        "UpdateSourceConditionValue": "true"
-    },
-    {
         "UpdateStageName": "SourceMod Extract",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "ExtractArchive",
@@ -118,28 +167,6 @@
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
         "SkipOnFailure": false,
-        "UpdateSourceConditionSetting": "InstallMod",
-        "UpdateSourceConditionValue": "true"
-    },
-    {
-        "UpdateStageName": "SourceMod Extract",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "ExtractArchive",
-        "UpdateSourceData": "sourcemod.zip",
-        "UpdateSourceTarget": "{{$FullBaseDir}}sm",
-        "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": true,
-        "SkipOnFailure": false,
-        "UpdateSourceConditionSetting": "InstallMod",
-        "UpdateSourceConditionValue": "true"
-    },
-    {
-        "UpdateStageName": "SourceMod Installation",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-NoProfile -Command \"Set-Location -Path 'csgo/740'; if (Test-Path 'csgo/cfg/sourcemod') { Remove-Item -Path 'sm/cfg/sourcemod' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null }; if (Test-Path 'csgo/addons/sourcemod/configs') { Remove-Item -Path 'sm/addons/sourcemod/configs' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null }; if (Test-Path 'csgo/addons/sourcemod/plugins') { Remove-Item -Path 'sm/addons/sourcemod/plugins' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null }; Copy-Item -Path 'sm/*' -Destination 'csgo' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null; Remove-Item -Path 'sm' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null\"",
-        "SkipOnFailure": true,
         "UpdateSourceConditionSetting": "InstallMod",
         "UpdateSourceConditionValue": "true"
     },
@@ -162,15 +189,6 @@
         "OverwriteExistingFiles": true,
         "UpdateSourceConditionSetting": "InstallMod",
         "UpdateSourceConditionValue": "true"
-    },
-    {
-        "UpdateStageName": "Disable Metamod and SourceMod",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "cmd.exe",
-        "UpdateSourceArgs": "/C cd ship\\2403\\ship\\addons > NUL 2>&1 && del /Q /F metamod.vdf > NUL 2>&1 & exit /b 0",
-        "UpdateSourceConditionSetting": "InstallMod",
-        "UpdateSourceConditionValue": "false"
     },
     {
         "UpdateStageName": "Disable Metamod and SourceMod",
