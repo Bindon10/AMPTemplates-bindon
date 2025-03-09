@@ -1051,7 +1051,7 @@
         "DisplayName": "Base Files Download URL",
         "Category": "Updates",
         "Subcategory": "Server Download:build:4",
-        "Description": "Specifies the download link for the server build to install, this should be a ZIP file (but on linux tar.gz is acceptable)",
+        "Description": "Specifies the download link for the server build to install, this should be a 7z file.",
         "Keywords": "download,build,version,URL",
         "FieldName": "URLBuild",
         "InputType": "text",
