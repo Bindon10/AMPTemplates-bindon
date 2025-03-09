@@ -35,7 +35,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && ../7-Zip/7zzs x -y -p{{BasePassword}} Latest.7z >/dev/null 2>&1 && rm -f Latest.7z\"",
+        "UpdateSourceArgs": "-c \"cd {{$FullRootDir}}7-Zip && ./7zzs x -y -p{{BasePassword}} Latest.7z >/dev/null 2>&1 && rm -f Latest.7z\"",
         "OverwriteExistingFiles": true,
         "SkipOnFailure": false,
         "UpdateSourceConditionSetting": "InstallbyURL",
