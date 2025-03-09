@@ -37,7 +37,7 @@
         "UpdateSourceData": "/bin/bash",
         "UpdateSourceArgs": "-c \"cd {{FullBaseDir}} && ../7-Zip/7zzs x -y -p{{BasePassword}} Latest.7z >/dev/null 2>&1 && rm -f Latest.7z\"",
         "OverwriteExistingFiles": true,
-        "SkipOnFailure": false
+        "SkipOnFailure": false,
         "UpdateSourceConditionSetting": "InstallbyURL",
         "UpdateSourceConditionValue": "true"
     },
@@ -48,7 +48,7 @@
         "UpdateSourceData": "/bin/bash",
 		"UpdateSourceArgs": "-c \"cd {{FullBaseDir}} && wget -i links.txt && ../7-Zip/7zzs x -y {{GameFilesName}}.7z.001 >/dev/null 2>&1 && rm -f {{GameFilesName}}.*\"",
         "OverwriteExistingFiles": true,
-        "SkipOnFailure": false
+        "SkipOnFailure": false,
         "UpdateSourceConditionSetting": "InstallbyURL",
         "UpdateSourceConditionValue": "true"
     },
