@@ -812,9 +812,9 @@
         "Subcategory": "Gameplay:joystick:2",
         "Description": "If set, players will not be auto-kicked",
         "Keywords": "disable,autokick,mp_disable_autokick",
-        "FieldName": "mp_disable_autokick",
+        "FieldName": "mp_autokick",
         "InputType": "checkbox",
-        "ParamFieldName": "mp_disable_autokick",
+        "ParamFieldName": "mp_autokick",
         "DefaultValue": "1",
         "EnumValues": {
             "False": "0",
