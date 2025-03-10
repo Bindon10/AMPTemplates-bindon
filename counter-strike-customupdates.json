@@ -78,7 +78,16 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && echo \\\"Changed to Game Directory\\\" && echo \\\"Extracting Patch Files\\\" && ../7-Zip/7zzs x -y -p{{PatchPassword}} latest.7z >/dev/null 2>&1 && rm -f latest.7z && echo \\\"Finished Extracting Patch Files\\\" && chmod +x srcds_linux && chmod +x srcds_run && echo \\\"Fixed SRCDS Permissions\\\" \"",
+        "UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && echo \\\"Changed to Game Directory\\\" && echo \\\"Extracting Patch Files\\\" && ../7-Zip/7zzs x -y -p{{PatchPassword}} latest.7z >/dev/null 2>&1 && rm -f latest.7z && echo \\\"Finished Extracting Patch Files\\\" \"",
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Fix SRCDS Executable Permissions",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && chmod +x srcds_linux && chmod +x srcds_run && echo \\\"Fixed permissions\\\" \"",
         "OverwriteExistingFiles": true,
         "SkipOnFailure": false
     },
