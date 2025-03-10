@@ -71,7 +71,7 @@
         "FieldName": "gamemode",
         "InputType": "enum",
         "ParamFieldName": "gamemode",
-        "DefaultValue": "+game_type 0 +game_mode 0",
+        "DefaultValue": "+game_type 0 +game_mode 1",
         "EnumValues": {
             "+game_type 0 +game_mode 0": "Casual (default)",
             "+game_type 0 +game_mode 1": "Competitive",
@@ -97,7 +97,7 @@
         "FieldName": "sv_game_mode_flags",
         "InputType": "enum",
         "ParamFieldName": "sv_game_mode_flags",
-        "DefaultValue": "0",
+        "DefaultValue": "32",
         "EnumValues": {
             "0": "None (default)",
             "4": "4 (tmm)",
