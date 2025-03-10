@@ -46,7 +46,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && wget -i links.txt -q --show-progress --progress=bar:force 2>&1 && echo \\\"Starting Archive Extraction, This may take some time.\\\" && ../7-Zip/7zzs x -y *.7z.001 >/dev/null 2>&1 && rm -f *.7z.* && rm -f links.txt && rm -f extracts.txt\"",
+		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && wget -i links.txt -q --show-progress --progress=bar:force 2>&1 && echo \\\"Starting Archive Extraction, This may take some time.\\\" && ../7-Zip/7zzs x -y *.7z.001 >/dev/null 2>&1 && rm -f *.7z.* && rm -f links.txt && rm -f extracts.txt && echo \\\"Finished Extracting Game Files\\\" \"",
         "OverwriteExistingFiles": true,
         "SkipOnFailure": false,
         "UpdateSourceConditionSetting": "InstallbyURL",
@@ -78,22 +78,9 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && ../7-Zip/7zzs x -y latest.7z >/dev/null 2>&1 && rm -f latest.7z\"",
+        "UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && echo \\\"Changed to Base Directory\\\" && echo \\\"Extracting Patch Files\\\" && ../7-Zip/7zzs x -y -p{{PatchPassword}} latest.7z >/dev/null 2>&1 && rm -f latest.7z && echo \\\"Finished Extracting Patch Files\\\" \"",
         "OverwriteExistingFiles": true,
-        "SkipOnFailure": false,
-        "UpdateSourceConditionSetting": "HasPassword",
-        "UpdateSourceConditionValue": "false"
-    },
-    {
-        "UpdateStageName": "Patch Files Extract (Passworded)",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && echo \\\"Changed to Base Directory\\\" && echo \\\"Extracting Patch Files\\\" && ../7-Zip/7zzs x -y -p{{PatchPassword}} latest.7z >/dev/null 2>&1 && rm -f latest.7z\"",
-        "OverwriteExistingFiles": true,
-        "SkipOnFailure": false,
-        "UpdateSourceConditionSetting": "HasPassword",
-        "UpdateSourceConditionValue": "true"
+        "SkipOnFailure": false
     },
     {
         "UpdateStageName": "Remove Old Library",

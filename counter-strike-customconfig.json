@@ -1100,21 +1100,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Patch Password Required",
-        "Category": "Updates",
-        "Subcategory": "Server Download:build:4",
-        "Description": "Sets if 7Zip will require a password to extract the patch.",
-        "Keywords": "install,download,update,URL",
-        "FieldName": "HasPassword",
-        "InputType": "enum",
-        "ParamFieldName": "HasPassword",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "false": "No Password",
-            "true": "Password Required"
-        }
-    },
-    {
         "DisplayName": "Patch Password",
         "Category": "Updates",
         "Subcategory": "Server Download:build:4",
