@@ -254,8 +254,8 @@
         "MinValue": "1",
         "MaxValue": "128",
         "ParamFieldName": "sv_maxplayers",
-        "DefaultValue": "8",
-        "Placeholder": "8",
+        "DefaultValue": "10",
+        "Placeholder": "10",
         "Suffix": "players",
         "EnumValues": {}
     },
@@ -956,6 +956,21 @@
         "DefaultValue": "128",
         "Placeholder": "128",
         "Suffix": "viewers",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "SourceTV Tickrate",
+        "Category": "CSGO:stadia_controller",
+        "Subcategory": "SourceTV:tv:3",
+        "Description": "Sets the tickrate for GOTV/Demo Recordings",
+        "Keywords": "max,tickrate,sourcetv,tv,tv_snapshotrate",
+        "FieldName": "tv_snapshotrate",
+        "InputType": "number",
+        "MinValue": "0",
+        "MaxValue": "255",
+        "ParamFieldName": "tv_snapshotrate",
+        "DefaultValue": "64",
+        "Placeholder": "64",
         "EnumValues": {}
     },
     {
