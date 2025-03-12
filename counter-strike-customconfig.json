@@ -71,7 +71,7 @@
         "FieldName": "gamemode",
         "InputType": "enum",
         "ParamFieldName": "gamemode",
-        "DefaultValue": "+game_type 0 +game_mode 1",
+        "DefaultValue": "+game_type 0 +game_mode 0",
         "EnumValues": {
             "+game_type 0 +game_mode 0": "Casual (default)",
             "+game_type 0 +game_mode 1": "Competitive",
@@ -276,6 +276,38 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Retakes CT player count",
+        "Category": "CSGO:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the number of CT (Counter-Terrorist) players when playing retake scenarios.",
+        "Keywords": "retakes,max,players,mp_retake_ct_count",
+        "FieldName": "mp_retake_ct_count",
+        "InputType": "number",
+        "MinValue": "1",
+        "MaxValue": "64",
+        "ParamFieldName": "mp_retake_ct_count",
+        "DefaultValue": "5",
+        "Placeholder": "5",
+        "Suffix": "players",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Retakes T player count",
+        "Category": "CSGO:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the number of T (Terrorist) players when playing retake scenarios.",
+        "Keywords": "retakes,max,players,mp_retake_t_count",
+        "FieldName": "mp_retake_t_count",
+        "InputType": "number",
+        "MinValue": "1",
+        "MaxValue": "64",
+        "ParamFieldName": "mp_retake_t_count",
+        "DefaultValue": "5",
+        "Placeholder": "5",
+        "Suffix": "players",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Warmup End Minimum Players",
         "Category": "CSGO:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -346,7 +378,7 @@
         "InputType": "enum",
         "ParamFieldName": "sv_pure",
         "IncludeInCommandLine": true,
-        "DefaultValue": "0",
+        "DefaultValue": "1",
         "EnumValues": {
             "0": "Client files not restricted",
             "1": "All client files except those listed in pure_server_whitelist.txt must match the server"
