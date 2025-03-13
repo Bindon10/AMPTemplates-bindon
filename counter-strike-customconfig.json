@@ -930,6 +930,36 @@
         }
     },
     {
+        "DisplayName": "Enable Auto BunnyHopping",
+        "Category": "CSGO:stadia_controller",
+        "Subcategory": "Gameplay:joystick:2",
+        "Description": "Enables Auto Bunnyhopping.",
+        "Keywords": "bunnyhop,bunny,hop,sv_autobunnyhopping",
+        "FieldName": "sv_autobunnyhopping",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_autobunnyhopping",
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Enable BunnyHopping",
+        "Category": "CSGO:stadia_controller",
+        "Subcategory": "Gameplay:joystick:2",
+        "Description": "Disables the air-velocity clamping to 110% of maximum running speed.",
+        "Keywords": "bunnyhop,bunny,hop,sv_enablebunnyhopping",
+        "FieldName": "sv_enablebunnyhopping",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_enablebunnyhopping",
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
         "DisplayName": "Disable SourceTV",
         "Category": "CSGO:stadia_controller",
         "Subcategory": "SourceTV:tv:3",
