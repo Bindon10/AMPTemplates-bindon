@@ -252,7 +252,7 @@
         "FieldName": "$MaxUsers",
         "InputType": "number",
         "MinValue": "1",
-        "MaxValue": "128",
+        "MaxValue": "64",
         "ParamFieldName": "sv_maxplayers",
         "DefaultValue": "10",
         "Placeholder": "10",
