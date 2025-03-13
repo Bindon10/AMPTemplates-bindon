@@ -58,7 +58,6 @@ App.PrimaryApplicationPortRef=ServerPort
 App.UniversalSleepApplicationUDPPortRef=ServerPort
 App.UniversalSleepSteamQueryPortRef=0
 App.MaxUsers=8
-Core.Security.AllowUserPasswords=True
 App.UseRandomAdminPassword=False
 App.PersistRandomPassword=False
 App.RemoteAdminPassword=
