@@ -78,7 +78,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && echo \\\"Changed to Game Directory\\\" && echo \\\"Extracting Patch Files\\\" && ../7-Zip/7zzs x -y -p{{PatchPassword}} latest.7z >/dev/null 2>&1 && rm -f latest.7z && echo \\\"Finished Extracting Patch Files\\\" && rm ./csgo/scripts/viewmodel_arm_config.txt \"",
+        "UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && echo \\\"Changed to Game Directory\\\" && echo \\\"Extracting Patch Files\\\" && ../7-Zip/7zzs x -y -p{{PatchPassword}} latest.7z >/dev/null 2>&1 && rm -f latest.7z && echo \\\"Finished Extracting Patch Files\\\"\"",
         "OverwriteExistingFiles": true,
         "SkipOnFailure": false,
         "UpdateSourceConditionSetting": "InstallPatch",
@@ -92,6 +92,15 @@
         "UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && chmod +x srcds_linux && chmod +x srcds_run && echo \\\"Fixed permissions\\\" \"",
         "OverwriteExistingFiles": true,
         "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Remove viewmodel_arm_config",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && rm ./csgo/scripts/viewmodel_arm_config.txt  \\\"Removed viewmodel_arm_config\\\" \"",
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": true
     },
     {
         "UpdateStageName": "Remove Old Library",
