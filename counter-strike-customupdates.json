@@ -98,7 +98,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && rm ./csgo/scripts/viewmodel_arm_config.txt  \\\"Removed viewmodel_arm_config\\\" \"",
+        "UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && rm ./csgo/scripts/viewmodel_arm_config.txt && echo \\\"Removed viewmodel_arm_config\\\" \"",
         "OverwriteExistingFiles": true,
         "SkipOnFailure": true
     },
