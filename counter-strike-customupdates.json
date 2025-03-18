@@ -80,7 +80,9 @@
         "UpdateSourceData": "/bin/bash",
         "UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && echo \\\"Changed to Game Directory\\\" && echo \\\"Extracting Patch Files\\\" && ../7-Zip/7zzs x -y -p{{PatchPassword}} latest.7z >/dev/null 2>&1 && rm -f latest.7z && echo \\\"Finished Extracting Patch Files\\\" && rm ./csgo/scripts/viewmodel_arm_config.txt \"",
         "OverwriteExistingFiles": true,
-        "SkipOnFailure": false
+        "SkipOnFailure": false,
+        "UpdateSourceConditionSetting": "InstallPatch",
+        "UpdateSourceConditionValue": "true"
     },
     {
         "UpdateStageName": "Fix SRCDS Executable Permissions",
