@@ -4,9 +4,9 @@
         "AutoMap": true,
         "ConfigType": "ini"
     },
-	{
+    {
 		"ConfigFile": "TBL/Config/DefaultEngine.ini",
 		"AutoMap": true,
 		"ConfigType": "ini"
-	}
+    }
 ]
