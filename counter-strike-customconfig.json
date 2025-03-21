@@ -97,7 +97,7 @@
         "FieldName": "sv_game_mode_flags",
         "InputType": "enum",
         "ParamFieldName": "sv_game_mode_flags",
-        "DefaultValue": "0",
+        "DefaultValue": "32",
         "EnumValues": {
             "0": "None (default)",
             "4": "4 (tmm)",
@@ -140,42 +140,58 @@
         "DefaultValue": "de_dust2",
         "EnumValues": {
             "cs_agency": "Agency",
-            "de_ancient": "Ancient",
+			"de_ali": "Ali",
             "de_anubis": "Anubis",
-            "cs_assault": "Assault",
+			"de_aztec": "Aztec",
             "ar_baggage": "Baggage",
             "de_bank": "Bank",
-            "dz_blacksite": "Blacksite",
-            "de_boyard": "Boyard",
+			"de_basalt": "Basalt",
+			"de_biome": "Biome",
+			"de_blackgold": "BlackGold",
             "de_cache": "Cache",
-            "de_canals": "Canals",
+			"ar_chess": "Chess",
+			"de_chlorine": "Chlorine",
             "de_cbble": "Cobblestone",
-            "gd_cbble": "Cobblestone (Guardian)",
-            "de_chalice": "Chalice",
             "ar_dizzy": "Dizzy",
-            "de_dust2": "Dust II (default)",
-            "dz_ember": "Ember",
+            "de_dust2": "Dust II",
+			"de_engage": "Engage",
+			"de_facade": "Facade",
+			"de_grind": "Grind",
+			"de_gwalior": "Gwalior",
             "de_inferno": "Inferno",
-            "cs_italy": "Italy",
+			"cs_insertion": "Insertion",
+			"cs_insertion2_dawn": "Insertion2",
             "de_lake": "Lake",
+			"de_library": "Library",
+			"lobby_mapveto": "Lobby MapVeto",
+			"de_log": "Log",
             "ar_lunacy": "Lunacy",
             "ar_monastery": "Monastery",
             "cs_militia": "Militia",
+			"cs_militia_u1": "Militia U1",
             "de_mirage": "Mirage",
+			"de_mocha": "Mocha",
+			"de_nirage": "Nirage",
             "de_nuke": "Nuke",
+			"de_nuke_u1": "Nuke U1",
             "cs_office": "Office",
+			"cs_outpost": "Outpost",
             "de_overpass": "Overpass",
-            "de_safehouse": "Safehouse",
+			"russian_roulette": "Russian Roulette",
+			"de_seaside": "Seaside",
+			"de_seaside_u1": "Seaside U1",
+			"de_season": "Season",
             "ar_shoots": "Shoots",
-            "de_shortdust": "Shortdust",
-            "de_shortnuke": "Shortnuke",
-            "dz_sirocco": "Sirocco",
+			"cs_siege": "Siege",
             "de_stmarc": "St. Marc",
             "de_sugarcane": "Sugarcane",
             "de_train": "Train",
+			"training1": "Training1",
             "de_tuscan": "Tuscan",
             "de_vertigo": "Vertigo",
-            "dz_vineyard": "Vineyard",
+			"de_vostok": "Vostok",
+			"cs_workout": "Workout",
+			"de_zoo": "Zoo",
             "{{CustomMap}}": "--Custom--"
         }
     },
@@ -236,10 +252,10 @@
         "FieldName": "$MaxUsers",
         "InputType": "number",
         "MinValue": "1",
-        "MaxValue": "128",
+        "MaxValue": "64",
         "ParamFieldName": "sv_maxplayers",
-        "DefaultValue": "8",
-        "Placeholder": "8",
+        "DefaultValue": "10",
+        "Placeholder": "10",
         "Suffix": "players",
         "EnumValues": {}
     },
@@ -260,6 +276,99 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Retakes CT player count",
+        "Category": "CSGO:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the number of CT (Counter-Terrorist) players when playing retake scenarios.",
+        "Keywords": "retakes,max,players,mp_retake_ct_count",
+        "FieldName": "mp_retake_ct_count",
+        "InputType": "number",
+        "MinValue": "1",
+        "MaxValue": "64",
+        "ParamFieldName": "mp_retake_ct_count",
+        "DefaultValue": "5",
+        "Placeholder": "5",
+        "Suffix": "players",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Retakes T player count",
+        "Category": "CSGO:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the number of T (Terrorist) players when playing retake scenarios.",
+        "Keywords": "retakes,max,players,mp_retake_t_count",
+        "FieldName": "mp_retake_t_count",
+        "InputType": "number",
+        "MinValue": "1",
+        "MaxValue": "64",
+        "ParamFieldName": "mp_retake_t_count",
+        "DefaultValue": "5",
+        "Placeholder": "5",
+        "Suffix": "players",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Warmup End Minimum Players",
+        "Category": "CSGO:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "This command sets the amount of players that need to connect to the game for warmup to be ended early. Set to 0 to wait until all players are connected",
+        "Keywords": "warmup,min,players,mp_endwarmup_player_count,end",
+        "FieldName": "mp_endwarmup_player_count",
+        "InputType": "number",
+        "MinValue": "1",
+        "MaxValue": "64",
+        "ParamFieldName": "mp_endwarmup_player_count",
+        "DefaultValue": "2",
+        "Placeholder": "2",
+        "Suffix": "players",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Keep current map in vote",
+        "Category": "CSGO:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, people can vote to play the same map again at the end of a match.",
+        "Keywords": "vote,map,mp_endmatch_votenextmap_keepcurrent",
+        "FieldName": "mp_endmatch_votenextmap_keepcurrent",
+        "InputType": "checkbox",
+        "ParamFieldName": "mp_endmatch_votenextmap_keepcurrent",
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Wargames included in map vote",
+        "Category": "CSGO:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the maximum amount of other War Games modes to be included in the end of map vote.",
+        "Keywords": "vote,map,modes,mp_endmatch_votenextmap_wargames_nummodes",
+        "FieldName": "mp_endmatch_votenextmap_wargames_nummodes",
+        "InputType": "number",
+        "MinValue": "0",
+        "MaxValue": "10",
+        "ParamFieldName": "mp_endmatch_votenextmap_wargames_nummodes",
+        "DefaultValue": "0",
+        "Placeholder": "0",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Disable Game Instructor",
+        "Category": "CSGO:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, the instruction popups will be disabled",
+        "Keywords": "instructor,game,gameinstructor",
+        "FieldName": "sv_gameinstructor_disable",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_gameinstructor_disable",
+        "DefaultValue": "1",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
         "DisplayName": "Pure Server Mode",
         "Category": "CSGO:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -269,7 +378,7 @@
         "InputType": "enum",
         "ParamFieldName": "sv_pure",
         "IncludeInCommandLine": true,
-        "DefaultValue": "0",
+        "DefaultValue": "1",
         "EnumValues": {
             "0": "Client files not restricted",
             "1": "All client files except those listed in pure_server_whitelist.txt must match the server"
@@ -419,8 +528,8 @@
         "InputType": "number",
         "MinValue": "0",
         "ParamFieldName": "sv_minrate",
-        "DefaultValue": "16000",
-        "Placeholder": "16000",
+        "DefaultValue": "393216",
+        "Placeholder": "393216",
         "Suffix": "bytes/second",
         "EnumValues": {}
     },
@@ -434,8 +543,8 @@
         "InputType": "number",
         "MinValue": "0",
         "ParamFieldName": "sv_maxrate",
-        "DefaultValue": "0",
-        "Placeholder": "0",
+        "DefaultValue": "786432",
+        "Placeholder": "786432",
         "Suffix": "bytes/second",
         "EnumValues": {}
     },
@@ -482,6 +591,22 @@
             "-pingboost 1 ": "1",
             "-pingboost 2 ": "2",
             "-pingboost 3 ": "3"
+        }
+    },
+    {
+        "DisplayName": "Voice Codec",
+        "Category": "CSGO:stadia_controller",
+        "Subcategory": "Gameplay:joystick:2",
+        "Description": "Sets the voice codec used for in-game voice communication",
+        "Keywords": "voice,codec,sv_voicecodec",
+        "FieldName": "sv_voicecodec",
+        "InputType": "enum",
+        "ParamFieldName": "sv_voicecodec",
+        "DefaultValue": "vaudio_celt",
+        "EnumValues": {
+            "vaudio_speex": "Legacy Speex codec",
+            "vaudio_miles": "Legacy Miles codec",
+            "vaudio_celt": "Newer CELT codec (22kHz, 22kbps)"
         }
     },
     {
@@ -692,7 +817,7 @@
         "FieldName": "mp_forcecamera",
         "InputType": "enum",
         "ParamFieldName": "mp_forcecamera",
-        "DefaultValue": "0",
+        "DefaultValue": "1",
         "EnumValues": {
             "0": "Any team",
             "1": "Only own team",
@@ -700,15 +825,44 @@
         }
     },
     {
+        "DisplayName": "Ladder Scale Speed",
+        "Category": "CSGO:stadia_controller",
+        "Subcategory": "Gameplay:joystick:2",
+        "Description": "Sets the speed at which ladders can be climbed",
+        "Keywords": "ladder,speed,scale",
+        "FieldName": "sv_ladder_scale_speed",
+        "InputType": "number",
+        "MinValue": "0",
+        "ParamFieldName": "sv_ladder_scale_speed",
+        "DefaultValue": "1",
+        "Placeholder": "1",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Disable Autokick",
         "Category": "CSGO:stadia_controller",
         "Subcategory": "Gameplay:joystick:2",
-        "Description": "If set, players will not be auto-kicked",
+        "Description": "If enabled, players will not be auto-kicked",
         "Keywords": "disable,autokick,mp_disable_autokick",
-        "FieldName": "mp_disable_autokick",
+        "FieldName": "mp_autokick",
         "InputType": "checkbox",
-        "ParamFieldName": "mp_disable_autokick",
+        "ParamFieldName": "mp_autokick",
         "DefaultValue": "1",
+        "EnumValues": {
+            "False": "1",
+            "True": "0"
+        }
+    },
+    {
+        "DisplayName": "Hibernate when empty",
+        "Category": "CSGO:stadia_controller",
+        "Subcategory": "Gameplay:joystick:2",
+        "Description": "If enabled, the server will hibernate when there are no players connected.",
+        "Keywords": "hibernate,empty,connected",
+        "FieldName": "sv_hibernate_when_empty",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_hibernate_when_empty",
+        "DefaultValue": "0",
         "EnumValues": {
             "False": "0",
             "True": "1"
@@ -776,6 +930,36 @@
         }
     },
     {
+        "DisplayName": "Enable Auto BunnyHopping",
+        "Category": "CSGO:stadia_controller",
+        "Subcategory": "Gameplay:joystick:2",
+        "Description": "Enables Auto Bunnyhopping.",
+        "Keywords": "bunnyhop,bunny,hop,sv_autobunnyhopping",
+        "FieldName": "sv_autobunnyhopping",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_autobunnyhopping",
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Enable BunnyHopping",
+        "Category": "CSGO:stadia_controller",
+        "Subcategory": "Gameplay:joystick:2",
+        "Description": "Disables the air-velocity clamping to 110% of maximum running speed.",
+        "Keywords": "bunnyhop,bunny,hop,sv_enablebunnyhopping",
+        "FieldName": "sv_enablebunnyhopping",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_enablebunnyhopping",
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
         "DisplayName": "Disable SourceTV",
         "Category": "CSGO:stadia_controller",
         "Subcategory": "SourceTV:tv:3",
@@ -806,6 +990,21 @@
         }
     },
     {
+        "DisplayName": "Advertise as watchable",
+        "Category": "CSGO:stadia_controller",
+        "Subcategory": "SourceTV:tv:3",
+        "Description": "If set, GOTV advertises the match as watchable via game UI",
+        "Keywords": "sourcetv,tv,tv_advertise_watchable",
+        "FieldName": "tv_advertise_watchable",
+        "InputType": "checkbox",
+        "ParamFieldName": "tv_advertise_watchable",
+        "DefaultValue": "1",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
         "DisplayName": "SourceTV Viewer Limit",
         "Category": "CSGO:stadia_controller",
         "Subcategory": "SourceTV:tv:3",
@@ -819,6 +1018,21 @@
         "DefaultValue": "128",
         "Placeholder": "128",
         "Suffix": "viewers",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "SourceTV Tickrate",
+        "Category": "CSGO:stadia_controller",
+        "Subcategory": "SourceTV:tv:3",
+        "Description": "Sets the tickrate for GOTV/Demo Recordings",
+        "Keywords": "max,tickrate,sourcetv,tv,tv_snapshotrate",
+        "FieldName": "tv_snapshotrate",
+        "InputType": "number",
+        "MinValue": "0",
+        "MaxValue": "255",
+        "ParamFieldName": "tv_snapshotrate",
+        "DefaultValue": "64",
+        "Placeholder": "64",
         "EnumValues": {}
     },
     {
@@ -935,21 +1149,72 @@
         "ParamFieldName": "InstallbyURL",
         "DefaultValue": "true",
         "EnumValues": {
+            "none": "Do nothing",
             "false": "Install Vanilla",
             "true": "Install Specified URL Build"
         }
     },
     {
-        "DisplayName": "Server Download URL",
+        "DisplayName": "Base Files Download URL",
         "Category": "Updates",
         "Subcategory": "Server Download:build:4",
-        "Description": "Specifies the download link for the server build to install, this should be a ZIP file (but on linux tar.gz is acceptable)",
+        "Description": "Specifies the download link for the server build to install, this should be a 7z file.",
         "Keywords": "download,build,version,URL",
         "FieldName": "URLBuild",
         "InputType": "text",
         "ParamFieldName": "URLBuild",
         "DefaultValue": "",
         "Placeholder": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Base Files Password",
+        "Category": "Updates",
+        "Subcategory": "Server Download:build:4",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "BasePassword",
+        "InputType": "password",
+        "ParamFieldName": "BasePassword",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Patch Management",
+        "Category": "Updates",
+        "Subcategory": "Server Download:build:4",
+        "Description": "Sets if a patch should be installed during the update process.",
+        "Keywords": "install,download,update,URL",
+        "FieldName": "InstallPatch",
+        "InputType": "enum",
+        "ParamFieldName": "InstallPatch",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "false": "Do Nothing",
+            "true": "Install Specified Patch"
+        }
+    },
+    {
+        "DisplayName": "Patch Download URL",
+        "Category": "Updates",
+        "Subcategory": "Server Download:build:4",
+        "Description": "Specifies the download link for the server build to install, this should be a ZIP file (but on linux tar.gz is acceptable)",
+        "Keywords": "download,build,version,URL",
+        "FieldName": "PatchURL",
+        "InputType": "text",
+        "ParamFieldName": "PatchURL",
+        "DefaultValue": "",
+        "Placeholder": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Patch Password",
+        "Category": "Updates",
+        "Subcategory": "Server Download:build:4",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "PatchPassword",
+        "InputType": "password",
+        "ParamFieldName": "PatchPassword",
         "EnumValues": {}
     }
 ]

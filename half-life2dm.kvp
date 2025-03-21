@@ -96,6 +96,7 @@ Console.MetricsRegex=
 Console.SuppressLogAtStart=False
 Console.ActivateLogRegex=
 Console.UserActions={}
+Core.Security.AllowUserPasswords=True
 Limits.SleepMode=True
 Limits.SleepOnStart=False
 Limits.SleepDelayMinutes=5
