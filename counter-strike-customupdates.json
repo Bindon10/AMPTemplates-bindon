@@ -102,7 +102,9 @@
         "UpdateSourceData": "/bin/bash",
         "UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && chmod +x srcds_linux && chmod +x srcds_run && echo \\\"Fixed permissions\\\" \"",
         "OverwriteExistingFiles": true,
-        "SkipOnFailure": false
+        "SkipOnFailure": false,
+        "UpdateSourceConditionSetting": "InstallPatch",
+        "UpdateSourceConditionValue": "true"
     },
     {
         "UpdateStageName": "Remove viewmodel_arm_config",
