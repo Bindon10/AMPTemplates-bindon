@@ -1150,6 +1150,7 @@
         "DefaultValue": "true",
         "EnumValues": {
             "none": "Do nothing",
+			"extract": "Extract Only",
             "false": "Install Vanilla",
             "true": "Install Specified URL Build"
         }
@@ -1190,6 +1191,7 @@
         "DefaultValue": "true",
         "EnumValues": {
             "false": "Do Nothing",
+			"extract": "Extract Only",
             "true": "Install Specified Patch"
         }
     },
