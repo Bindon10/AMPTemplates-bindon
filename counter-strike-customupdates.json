@@ -46,18 +46,18 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && wget -i links.txt -q --show-progress --progress=bar:force 2>&1 && echo \\\"Starting Archive Extraction, This may take some time.\\\" && while IFS= read -r f; do ../7-Zip/7zzs x -y \\\"$f\\\" >/dev/null 2>&1; done < extracts.txt && rm -f *.7z.* && rm -f *.7z && rm -f links.txt && rm -f extracts.txt && echo \\\"Finished Extracting Game Files\\\" \"",
+		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && wget -i links.txt -q --show-progress --progress=bar:force 2>&1 && echo 'Starting Archive Extraction, This may take some time.' && while IFS= read -r f; do ../7-Zip/7zzs x -y \\\"$f\\\" >/dev/null 2>&1; done < extracts.txt && rm -f *.7z.* links.txt extracts.txt && echo 'Finished Extracting Game Files'\""
         "OverwriteExistingFiles": true,
         "SkipOnFailure": false,
         "UpdateSourceConditionSetting": "InstallbyURL",
         "UpdateSourceConditionValue": "true"
     },
     {
-        "UpdateStageName": "Extract Files (Fallback)",
+        "UpdateStageName": "Extract Game Files (Fallback)",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && echo \\\"Starting Archive Extraction, This may take some time.\\\" && while IFS= read -r f; do ../7-Zip/7zzs x -y \\\"$f\\\" >/dev/null 2>&1; done < extracts.txt && rm -f *.7z.* && rm -f *.7z && rm -f links.txt && rm -f extracts.txt && echo \\\"Finished Extracting Game Files\\\" \"",
+		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && echo 'Starting Archive Extraction, This may take some time.' && while IFS= read -r f; do ../7-Zip/7zzs x -y \\\"$f\\\" >/dev/null 2>&1; done < extracts.txt && rm -f *.7z.* *.7z links.txt extracts.txt && echo 'Finished Extracting Game Files'\""
         "OverwriteExistingFiles": true,
         "SkipOnFailure": false,
         "UpdateSourceConditionSetting": "InstallbyURL",
