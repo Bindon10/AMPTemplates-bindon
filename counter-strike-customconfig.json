@@ -1150,6 +1150,7 @@
         "DefaultValue": "true",
         "EnumValues": {
             "none": "Do nothing",
+			"extract": "Extraction Only",
             "false": "Install Vanilla",
             "true": "Install Specified URL Build"
         }
