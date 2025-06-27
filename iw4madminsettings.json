@@ -141,7 +141,7 @@
   "Servers": [
     {
       "IPAddress": "127.0.0.1",
-      "Port": 1625,
+      "Port": 1624,
       "Password": "{{password}}",
       "Rules": [],
       "AutoMessages": [],
