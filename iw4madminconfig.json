@@ -65,6 +65,19 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "RCON Password",
+        "Category": "IW4MAdmin:code",
+        "Subcategory": "Server:dns:1",
+        "Description": "See the Security and Privacy menu for configurable options for the server's RCON",
+        "Keywords": "rcon,password,rcon_password",
+        "FieldName": "$RemoteAdminPassword",
+        "InputType": "hidden",
+        "IsFlagArgument": false,
+        "ParamFieldName": "password",
+        "EnumValues": {}
+    },
+    {
+    {
         "DisplayName": "Server Version",
         "Category": "Updates",
         "Subcategory": "Server Updates:build:-1",
