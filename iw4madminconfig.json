@@ -116,8 +116,8 @@
         "IsFlagArgument": false,
         "ParamFieldName": "DotnetVersion",
         "IncludeInCommandLine": false,
-        "DefaultValue": "",
-        "Placeholder": "6.0.27",
+        "DefaultValue": "8.0.0",
+        "Placeholder": "8.0.0",
         "EnumValues": {}
     }
 ]
