@@ -140,9 +140,9 @@
   },
   "Servers": [
     {
-      "IPAddress": "127.0.0.1",
-      "Port": 1624,
-      "Password": "{{password}}",
+      "IPAddress": "{{$ApplicationIPBinding}}",
+      "Port": "{{$ServerPort}}",
+      "Password": "{{rcon_password}}",
       "Rules": [],
       "AutoMessages": [],
       "ManualLogPath": null,
