@@ -51,6 +51,20 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Additional Command Line Parameters",
+        "Category": "IW4MAdmin:code",
+        "Subcategory": "Server:dns:1",
+        "Description": "Specifies additional [command line parameters]",
+        "Keywords": "custom,server,arguments,variables,cvars,convars,parameters",
+        "FieldName": "CustomParameters",
+        "InputType": "text",
+        "IsFlagArgument": false,
+        "ParamFieldName": "CustomParameters",
+        "DefaultValue": "",
+        "Placeholder": "",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Server Version",
         "Category": "Updates",
         "Subcategory": "Server Updates:build:-1",
