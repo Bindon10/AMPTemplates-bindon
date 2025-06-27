@@ -142,7 +142,7 @@
     {
       "IPAddress": "127.0.0.1",
       "Port": 1625,
-      "Password": "{{$RemoteAdminPassword}}",
+      "Password": "{{password}}",
       "Rules": [],
       "AutoMessages": [],
       "ManualLogPath": null,
