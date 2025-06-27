@@ -48,7 +48,7 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "cmd.exe",
-        "UpdateSourceArgs": "/C cd call-of-dutymw2\\10190 && .\\alterware-launcher.exe iw4x --update --skip-launcher-update --bonus --force",
+        "UpdateSourceArgs": "/C cd call-of-dutymw2\\10190 && .\\iw4x-launcher.exe iw4x --update --skip-self-update --force",
         "SkipOnFailure": false
     },
     {
@@ -56,7 +56,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd ./call-of-dutymw2/10190 && ./alterware-launcher iw4x --update --skip-launcher-update --bonus --force\"",
+        "UpdateSourceArgs": "-c \"cd ./call-of-dutymw2/10190 && ./iw4x-launcher iw4x --update --skip-self-update --force\"",
         "SkipOnFailure": false
     },
     {
