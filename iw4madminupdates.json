@@ -1,0 +1,105 @@
+[
+    {
+        "UpdateStageName": "IW4MAdmin Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "GithubRelease",
+        "UpdateSourceArgs": "RaidMax/IW4M-Admin",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": true,
+        "UpdateSourceConditionSetting": "ServerVersion",
+        "UpdateSourceConditionValue": "latest"
+    },
+    {
+        "UpdateStageName": "IW4MAdmin Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://github.com/RaidMax/IW4M-Admin/releases/download/{{ServerPrereleaseVersion}}-prerelease/IW4MAdmin-{{ServerPrereleaseVersion}}.zip",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": true,
+        "UpdateSourceConditionSetting": "ServerVersion",
+        "UpdateSourceConditionValue": "prerelease"
+    },
+    {
+        "UpdateStageName": "IW4MAdminSettings.json Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/Greelan/AMPTemplates/dev/iw4madminsettings.json",
+        "UpdateSourceArgs": "IW4MAdminSettings.json",
+        "UpdateSourceTarget": "{{$FullBaseDir}}Configuration",
+        "OverwriteExistingFiles": false
+    },
+    {
+        "UpdateStageName": "StatsPluginSettings.json Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/Greelan/AMPTemplates/dev/iw4madminstatspluginsettings.json",
+        "UpdateSourceArgs": "StatsPluginSettings.json",
+        "UpdateSourceTarget": "{{$FullBaseDir}}Configuration",
+        "OverwriteExistingFiles": false
+    },
+    {
+        "UpdateStageName": "ProfanityDetermentSettings.json Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/Greelan/AMPTemplates/dev/iw4madminprofanitydetermentsettings.json",
+        "UpdateSourceArgs": "ProfanityDetermentSettings.json",
+        "UpdateSourceTarget": "{{$FullBaseDir}}Configuration",
+        "OverwriteExistingFiles": false
+    },
+    {
+        "UpdateStageName": "Create Dotnet Directory",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}Dotnet"
+    },
+    {
+        "UpdateStageName": "ASP.NET Core Runtime Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSourceArch": "x86_64",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"DotnetVersion=\\\"{{DotnetVersion}}\\\" && if [[ -z \\\"$DotnetVersion\\\" ]]; then DotnetVersion=$(wget -qO- https://builds.dotnet.microsoft.com/dotnet/release-metadata/6.0/releases.json | jq -r \\\".[\\\\\\\"latest-runtime\\\\\\\"]\\\"); fi && if [[ ! \\\"$DotnetVersion\\\" =~ ^[0-9]+\\.[0-9]+\\.[0-9]+$ ]]; then echo \\\"Invalid ASP.NET Core Runtime version format specified\\\" && exit 1; fi && wget -qO dotnet.tar.gz https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/$DotnetVersion/aspnetcore-runtime-$DotnetVersion-linux-x64.tar.gz && echo \\\"ASP.NET Core Runtime v$DotnetVersion downloaded\\\"\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "ASP.NET Core Runtime Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSourceArch": "aarch64",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"DotnetVersion=\\\"{{DotnetVersion}}\\\" && if [[ -z \\\"$DotnetVersion\\\" ]]; then DotnetVersion=$(wget -qO- https://builds.dotnet.microsoft.com/dotnet/release-metadata/6.0/releases.json | jq -r \\\".[\\\\\\\"latest-runtime\\\\\\\"]\\\"); fi && if [[ ! \\\"$DotnetVersion\\\" =~ ^[0-9]+\\.[0-9]+\\.[0-9]+$ ]]; then echo \\\"Invalid ASP.NET Core Runtime version format specified\\\" && exit 1; fi && wget -qO dotnet.tar.gz https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/$DotnetVersion/aspnetcore-runtime-$DotnetVersion-linux-arm64.tar.gz && echo \\\"ASP.NET Core Runtime v$DotnetVersion downloaded\\\"\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "ASP.NET Core Runtime Download",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $DotnetVersion='{{DotnetVersion}}'; if ([string]::IsNullOrWhiteSpace($DotnetVersion)) { $DotnetVersion=(Invoke-RestMethod -UseBasicParsing -Uri https://builds.dotnet.microsoft.com/dotnet/release-metadata/6.0/releases.json).\\\"latest-runtime\\\" }; if ($DotnetVersion -notmatch '^\\d+\\.\\d+\\.\\d+$') { Write-Output \\\"Invalid ASP.NET Core Runtime version format specified\\\"; exit 1 }; Invoke-WebRequest -UseBasicParsing -Uri https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/$DotnetVersion/aspnetcore-runtime-$DotnetVersion-win-x64.zip -OutFile 'dotnet.zip'; if ($?) { Write-Output \\\"ASP.NET Core Runtime v$DotnetVersion downloaded\\\" }\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "ASP.NET Core Runtime Extract",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "ExtractArchive",
+        "UpdateSourceData": "dotnet.tar.gz",
+        "UpdateSourceTarget": "{{$FullBaseDir}}Dotnet",
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "ASP.NET Core Runtime Extract",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "ExtractArchive",
+        "UpdateSourceData": "dotnet.zip",
+        "UpdateSourceTarget": "{{$FullBaseDir}}Dotnet",
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": true,
+        "SkipOnFailure": false
+    }
+]
