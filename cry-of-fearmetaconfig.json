@@ -1,0 +1,8 @@
+[
+    {
+        "ConfigFile": "cryoffear/server.cfg",
+        "AutoMap": true,
+        "ConfigType": "template",
+        "ConfigFileTemplate": "cof/AMP_server.cfg"
+    }
+]
