@@ -11,7 +11,7 @@
         "UpdateStageName": "Server.cfg Template File Download",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/half-life-opposing-forceserver.cfg",
+        "UpdateSourceData": "https://raw.githubusercontent.com/Bindon10/AMPTemplates-bindon/main/cry-of-fearserver.cfg",
         "UpdateSourceArgs": "AMP_server.cfg",
         "UpdateSourceTarget": "{{$FullRootDir}}",
         "OverwriteExistingFiles": true,
