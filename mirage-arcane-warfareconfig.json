@@ -157,6 +157,36 @@
         }
     },
 	{
+        "DisplayName": "Kill Balance Time Check",
+        "Category": "Mirage Arcane Warfare:stadia_controller",
+		"SubCategory": "Moderation:dns:2",
+        "Description": "Sets the time before the server will check to balance teams",
+        "Keywords": "balance,check,time,kill",
+        "FieldName": "TimeBetweenTeamKillBalanceChecks",
+        "InputType": "number",
+        "MinValue": "0",
+        "ParamFieldName": "/Script/TBL.TBLGameMode.TimeBetweenTeamKillBalanceChecks",
+        "DefaultValue": "60",
+        "Placeholder": "60",
+		"Suffix": "Seconds",
+        "EnumValues": {}
+    },
+	{
+        "DisplayName": "Ignore Auto Balance With Time Remaining",
+        "Category": "Mirage Arcane Warfare:stadia_controller",
+		"SubCategory": "Moderation:dns:2",
+        "Description": "Disables auto balancing if a certain amount of time is remaining on the current map",
+        "Keywords": "disable,balance,time",
+        "FieldName": "IgnoreAutoBalanceStageTimeRemaining",
+        "InputType": "number",
+        "MinValue": "0",
+        "ParamFieldName": "/Script/TBL.TBLGameMode.IgnoreAutoBalanceStageTimeRemaining",
+        "DefaultValue": "120",
+        "Placeholder": "120",
+		"Suffix": "Seconds",
+        "EnumValues": {}
+    },
+	{
         "DisplayName": "Enable Bots",
         "Category": "Mirage Arcane Warfare:stadia_controller",
 		"SubCategory": "Server:dns:1",
