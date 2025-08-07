@@ -184,8 +184,8 @@
         "ParamFieldName": "/Script/TBL.TBLGameMode.bConfigBotAssistedServer",
         "DefaultValue": "false",
         "EnumValues": {
-            "False": "false",
-            "True": "true"
+            "False": "False",
+            "True": "True"
         }
     },
     {
