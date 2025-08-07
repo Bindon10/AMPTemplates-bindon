@@ -182,7 +182,7 @@
         "FieldName": "bConfigBotAssistedServer",
         "InputType": "checkbox",
         "ParamFieldName": "/Script/TBL.TBLGameMode.bConfigBotAssistedServer",
-        "DefaultValue": "true",
+        "DefaultValue": "false",
         "EnumValues": {
             "False": "false",
             "True": "true"
