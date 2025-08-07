@@ -6,6 +6,14 @@
         "UpdateSourceArgs": "{{$FullBaseDir}}TBL/Config"
     },
     {
+        "UpdateStageName": "SteamCMD Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "369630",
+        "UpdateSourceArgs": "368420",
+        "ForceDownloadPlatform": "Windows"
+    },
+    {
         "UpdateStageName": "Config Template Download",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
@@ -13,14 +21,6 @@
         "UpdateSourceTarget": "{{$FullBaseDir}}TBL/Config",
         "UpdateSourceArgs": "DefaultGame.ini",
         "OverwriteExistingFiles": true
-    },
-    {
-        "UpdateStageName": "SteamCMD Download",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "SteamCMD",
-        "UpdateSourceData": "369630",
-        "UpdateSourceArgs": "368420",
-        "ForceDownloadPlatform": "Windows"
     },
     {
         "UpdateStageName":  "Initialise Wine",
