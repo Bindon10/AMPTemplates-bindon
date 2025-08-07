@@ -159,7 +159,7 @@
 	{
         "DisplayName": "Kill Balance Time Check",
         "Category": "Mirage Arcane Warfare:stadia_controller",
-		"SubCategory": "Moderation:dns:2",
+		"SubCategory": "Server:dns:1",
         "Description": "Sets the time before the server will check to balance teams",
         "Keywords": "balance,check,time,kill",
         "FieldName": "TimeBetweenTeamKillBalanceChecks",
@@ -174,7 +174,7 @@
 	{
         "DisplayName": "Ignore Auto Balance With Time Remaining",
         "Category": "Mirage Arcane Warfare:stadia_controller",
-		"SubCategory": "Moderation:dns:2",
+		"SubCategory": "Server:dns:1",
         "Description": "Disables auto balancing if a certain amount of time is remaining on the current map",
         "Keywords": "disable,balance,time",
         "FieldName": "IgnoreAutoBalanceStageTimeRemaining",
