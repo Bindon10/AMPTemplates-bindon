@@ -30,10 +30,10 @@ App.DisplayName=Mirage: Arcane Warfare
 App.RootDir=./mirageac/
 App.BaseDirectory=./mirageac/369630/
 App.SteamWorkshopDownloadLocation=
-App.ExecutableWin=369630\TBL\Binaries\Win64\TBLServer-Win64-Shipping.exe
+App.ExecutableWin=369630\TBL\Binaries\Win64\TBLServer.exe
 App.ExecutableLinux=/usr/bin/wine
 App.WorkingDir=369630/TBL/Binaries/Win64
-App.LinuxCommandLineArgs=./TBLServer-Win64-Shipping.exe
+App.LinuxCommandLineArgs=./TBLServer.exe
 App.WindowsCommandLineArgs=
 App.CommandLineArgs={{$PlatformArgs}} {{Map}} -Port={{$GamePort}} -QueryPort={{$QueryPort}} {{Customargs}} -log
 App.UseLinuxIOREDIR=False
@@ -80,7 +80,7 @@ App.SteamUpdateAnonymousLogin=true
 App.SteamForceLoginPrompt=false
 App.RapidStartup=False
 App.DumpFullChildProcessTree=False
-App.MonitorChildProcessName=TBLServer-Win64-Shipping.exe
+App.MonitorChildProcessName=^.*TBLServer.exe.*-Port={{$GamePort}}.*$
 App.SupportsUniversalSleep=False
 App.WakeupMode=Any
 App.ApplicationReadyMode=Immediate
