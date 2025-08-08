@@ -14,6 +14,16 @@
         "ForceDownloadPlatform": "Windows"
     },
     {
+        "UpdateStageName": "SteamCMD Server SDK Fix",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "1007",
+        "UpdateSourceArgs": "1007",
+		"UpdateSourceTarget":"{{$FullBaseDir}}/TBL/Binaries/Win64",
+		"ForceDownloadPlatform": "Windows",
+        "OverwriteExistingFiles": true
+    },
+    {
         "UpdateStageName": "Config Template Download",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
