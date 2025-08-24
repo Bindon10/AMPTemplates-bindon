@@ -50,6 +50,21 @@
             "ar_Tunnel": "ar_Tunnel"
         }
     },
+	{
+        "DisplayName": "Enable Logging",
+        "Category": "Mirage Arcane Warfare:stadia_controller",
+		"SubCategory": "Server:dns:1",
+        "Description": "If set, logging will be enabled for the console",
+        "Keywords": "error,logging,logs",
+        "FieldName": "log",
+        "InputType": "checkbox",
+        "ParamFieldName": "log",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "",
+            "True": "-log"
+        }
+    },
     {
         "DisplayName": "Warmup Time",
         "Category": "Mirage Arcane Warfare:stadia_controller",
