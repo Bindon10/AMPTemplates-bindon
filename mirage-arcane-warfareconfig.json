@@ -59,7 +59,7 @@
         "FieldName": "log",
         "InputType": "checkbox",
         "ParamFieldName": "log",
-        "DefaultValue": "false",
+        "DefaultValue": "",
         "EnumValues": {
             "False": "",
             "True": "-log"
