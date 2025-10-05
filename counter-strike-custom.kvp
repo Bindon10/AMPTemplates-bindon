@@ -25,6 +25,7 @@ Meta.AppConfigId=49f9ced8-621b-47c8-ab4f-8a6bcc430dd4
 Meta.ConfigVersion=5
 Meta.ReleaseNotes=
 Meta.BreakingReleaseNotes=
+Meta.OriginalSource=Bindon10/AMPTemplates-bindon-main
 Meta.AppIsMultiIPAware=True
 App.DisplayName=Counter-Strike: Custom
 App.RootDir=./csgo/
