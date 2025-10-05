@@ -124,7 +124,7 @@
         "UpdateStageName": "Server.cfg Template File Download",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://raw.githubusercontent.com/bindon10/AMPTemplates-bindon/dev/counter-strike-customserver.cfg",
+        "UpdateSourceData": "https://raw.githubusercontent.com/bindon10/AMPTemplates-bindon/main/counter-strike-customserver.cfg",
         "UpdateSourceArgs": "AMP_server.cfg",
         "UpdateSourceTarget": "{{$FullRootDir}}",
         "OverwriteExistingFiles": true
