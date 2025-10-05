@@ -1147,7 +1147,7 @@
         "FieldName": "InstallbyURL",
         "InputType": "enum",
         "ParamFieldName": "InstallbyURL",
-        "DefaultValue": "true",
+        "DefaultValue": "false",
         "EnumValues": {
             "none": "Do nothing",
 			"extract": "Extract Only",
@@ -1188,7 +1188,7 @@
         "FieldName": "InstallPatch",
         "InputType": "enum",
         "ParamFieldName": "InstallPatch",
-        "DefaultValue": "true",
+        "DefaultValue": "false",
         "EnumValues": {
             "false": "Do Nothing",
 			"extract": "Extract Only",
