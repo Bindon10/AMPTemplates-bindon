@@ -378,7 +378,7 @@
         "InputType": "enum",
         "ParamFieldName": "sv_pure",
         "IncludeInCommandLine": true,
-        "DefaultValue": "1",
+        "DefaultValue": "0",
         "EnumValues": {
             "0": "Client files not restricted",
             "1": "All client files except those listed in pure_server_whitelist.txt must match the server"
@@ -393,7 +393,7 @@
         "FieldName": "sv_pure_kick_clients",
         "InputType": "checkbox",
         "ParamFieldName": "sv_pure_kick_clients",
-        "DefaultValue": "1",
+        "DefaultValue": "0",
         "EnumValues": {
             "False": "0",
             "True": "1"
