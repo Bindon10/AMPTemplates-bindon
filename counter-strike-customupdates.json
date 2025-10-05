@@ -107,15 +107,6 @@
         "UpdateSourceConditionValue": "true"
     },
     {
-        "UpdateStageName": "Remove viewmodel_arm_config",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && rm ./csgo/scripts/viewmodel_arm_config.txt && echo \\\"Removed viewmodel_arm_config\\\" \"",
-        "OverwriteExistingFiles": true,
-        "SkipOnFailure": true
-    },
-    {
         "UpdateStageName": "Remove Old Library",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
