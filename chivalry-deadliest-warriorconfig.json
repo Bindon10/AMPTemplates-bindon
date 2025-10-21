@@ -316,5 +316,50 @@
         "ParamFieldName": "CustomOptions",
         "DefaultValue": "",
         "EnumValues": {}
+    },
+	{
+        "DisplayName": "Client Tickrate",
+        "Category": "Chivalry Medieval Warfare:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the maximum Tickrate a client will use while connected to the server",
+        "Keywords": "max,tickrate,tick,Maxtick",
+        "FieldName": "NetClientTicksPerSecond",
+        "InputType": "number",
+        "MinValue": "0",
+        "ParamFieldName": "Engine.Engine.NetClientTicksPerSecond",
+        "DefaultValue": "80",
+        "Placeholder": "80",
+        "Suffix": "ClientTicks",
+        "EnumValues": {}
+    },
+	{
+        "DisplayName": "Net Server Tickrate",
+        "Category": "Chivalry Medieval Warfare:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the maximum Tickrate the server will use",
+        "Keywords": "max,tickrate,tick,Maxtick",
+        "FieldName": "NetServerMaxTickRate",
+        "InputType": "number",
+        "MinValue": "0",
+        "ParamFieldName": "IpDrv.TcpNetDriver.NetServerMaxTickRate",
+        "DefaultValue": "30",
+        "Placeholder": "30",
+        "Suffix": "ServerTicks",
+        "EnumValues": {}
+    },
+	{
+        "DisplayName": "Lan Maximum Tickrate",
+        "Category": "Chivalry Medieval Warfare:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the maximum Tickrate the LAN server will use",
+        "Keywords": "max,tickrate,tick,Maxtick",
+        "FieldName": "LanServerMaxTickRate",
+        "InputType": "number",
+        "MinValue": "0",
+        "ParamFieldName": "IpDrv.TcpNetDriver.LanServerMaxTickRate",
+        "DefaultValue": "35",
+        "Placeholder": "35",
+        "Suffix": "ServerTicks",
+        "EnumValues": {}
     }
 ]

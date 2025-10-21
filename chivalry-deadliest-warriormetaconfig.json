@@ -3,5 +3,10 @@
         "ConfigFile": "CDWGame/Config/PCServer-CDWGame.ini", 
         "AutoMap": true,
         "ConfigType": "ini"
+    },
+    {
+        "ConfigFile": "CDWGame/Config/PCServer-CDWEngine.ini", 
+        "AutoMap": true,
+        "ConfigType": "ini"
     }
 ]

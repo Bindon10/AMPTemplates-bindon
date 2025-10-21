@@ -375,8 +375,8 @@
         "InputType": "number",
         "MinValue": "0",
         "ParamFieldName": "IpDrv.TcpNetDriver.NetMaxTickRate",
-        "DefaultValue": "60",
-        "Placeholder": "60",
+        "DefaultValue": "30",
+        "Placeholder": "30",
         "Suffix": "ServerTicks",
         "EnumValues": {}
     },
@@ -390,8 +390,8 @@
         "InputType": "number",
         "MinValue": "0",
         "ParamFieldName": "IpDrv.TcpNetDriver.LanMaxTickRate",
-        "DefaultValue": "60",
-        "Placeholder": "60",
+        "DefaultValue": "35",
+        "Placeholder": "35",
         "Suffix": "ServerTicks",
         "EnumValues": {}
     }
