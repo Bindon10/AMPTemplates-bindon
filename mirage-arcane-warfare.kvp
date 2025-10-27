@@ -34,7 +34,7 @@ App.SteamWorkshopDownloadLocation=
 App.ExecutableWin=369630\TBL\Binaries\Win64\TBLServer.exe
 App.ExecutableLinux=/usr/bin/wine
 App.WorkingDir=369630/TBL/Binaries/Win64
-App.LinuxCommandLineArgs=./TBLServer.exe
+App.LinuxCommandLineArgs="./TBLServer.exe"
 App.WindowsCommandLineArgs=
 App.CommandLineArgs={{$PlatformArgs}} {{Map}} -Port={{$GamePort}} -QueryPort={{$QueryPort}} {{Customargs}} {{log}}
 App.UseLinuxIOREDIR=False
