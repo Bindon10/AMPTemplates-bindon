@@ -3,7 +3,7 @@
         "UpdateStageName": "Config Directory Creation",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CreateDirectory",
-        "UpdateSourceArgs": "{{$FullBaseDir}}CDWGame/Config"
+        "UpdateSourceArgs": "{{$FullBaseDir}}CDWGame/Config",
         "SkipOnFailure": false
     },
     {
@@ -13,7 +13,7 @@
         "UpdateSourceData": "https://raw.githubusercontent.com/Bindon10/AMPTemplates-bindon/main/chivalry-deadliest-warriorcdwgame.ini",
         "UpdateSourceTarget": "{{$FullBaseDir}}CDWGame/Config",
         "UpdateSourceArgs": "PCServer-CDWGame.ini",
-        "OverwriteExistingFiles": false
+        "OverwriteExistingFiles": false,
         "SkipOnFailure": false
     },
     {
@@ -22,7 +22,7 @@
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "258680",
         "UpdateSourceArgs": "241280",
-        "ForceDownloadPlatform": "Windows"
+        "ForceDownloadPlatform": "Windows",
         "SkipOnFailure": false
     },
     {
