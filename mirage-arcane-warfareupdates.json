@@ -3,7 +3,7 @@
         "UpdateStageName": "Config Directory Creation",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CreateDirectory",
-        "UpdateSourceArgs": "{{$FullBaseDir}}TBL/Config"
+        "UpdateSourceArgs": "{{$FullBaseDir}}TBL/Config",
         "SkipOnFailure": false
     },
     {
@@ -12,7 +12,7 @@
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "369630",
         "UpdateSourceArgs": "368420",
-        "ForceDownloadPlatform": "Windows"
+        "ForceDownloadPlatform": "Windows",
         "SkipOnFailure": false
     },
     {
