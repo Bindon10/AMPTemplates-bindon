@@ -33,7 +33,7 @@
         "UpdateSourceArgs": "1007",
 		"UpdateSourceTarget":"{{$FullBaseDir}}/Binaries/Win64",
 		"ForceDownloadPlatform": "Windows",
-        "OverwriteExistingFiles": true
+        "OverwriteExistingFiles": true,
         "SkipOnFailure": false
     },
     {
